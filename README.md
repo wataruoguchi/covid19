@@ -53,3 +53,4 @@ and then the staging site (https://stg-covid19-tokyo.netlify.com/) will be also 
 
 When `development` branch is updated, the HTML files will be automatically built onto `dev-pages` branch,
 and then the development site (https://dev-covid19-tokyo.netlify.com/) will be also updated.
+
