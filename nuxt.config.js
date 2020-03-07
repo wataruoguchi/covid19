@@ -26,7 +26,7 @@ module.exports = {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp'
+        content: 'https://admiring-davinci-e0cd70.netlify.com'
       },
       {
         hid: 'og:title',
@@ -41,7 +41,7 @@ module.exports = {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
+        content: 'https://admiring-davinci-e0cd70.netlify.com/ogp.png'
       }
     ],
     link: [
