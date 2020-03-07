@@ -11,12 +11,6 @@
       url="https://www.metro.tokyo.lg.jp/tosei/hodohappyo/press/2020/03/03/28.html"
       text="新型コロナウイルスに関連した患者の発生について（第65報）"
     />
-    <StaticInfo
-      class="mb-4"
-      :url="'/flow'"
-      :text="'自分や家族の症状に不安や心配があればまずは電話相談をどうぞ'"
-      :btn-text="'相談の手順を見る'"
-    />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
         <svg-card
