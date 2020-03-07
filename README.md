@@ -1,4 +1,4 @@
-# 北海道 新型コロナウイルスまとめサイト
+# 新型コロナウイルス感染症対策サイト北海道版
 
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 
@@ -79,4 +79,5 @@ and then the staging site (XXXXXXXX) will be also updated.（under construction�
 
 When `development` branch is updated, the HTML files will be automatically built onto `dev-pages` branch,
 and then the development site (https://admiring-davinci-e0cd70.netlify.com/ ) will be also updated.
+
 
