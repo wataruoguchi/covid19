@@ -76,7 +76,7 @@
     "Tokyo Metropolitan Government": "東京都",
     "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
     "The latest updates": "道内の最新感染動向",
-    "If you have any symptoms": "新型コロナウイルス感染症が心配なときに",
+    "If you have any symptoms": "感染予防と相談窓口",
     "for Families with children": "お子様をお持ちの皆様へ",
     "for Citizens": "道民の皆様へ",
     "for Enterprises and Employees": "企業の皆様・はたらく皆様へ",
@@ -112,7 +112,7 @@ export default {
         {
           icon: 'covid',
           title: this.$t('If you have any symptoms'),
-          link: '/flow',
+          link: 'http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#道民へ',
           divider: true
         },
         {
