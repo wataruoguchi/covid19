@@ -119,7 +119,7 @@ module.exports = {
     theme: {}
   },
   googleAnalytics: {
-    id: 'UA-159417676-1'
+    id: 'UA-159982743-1'
   },
   // /*
   // ** Build configuration
