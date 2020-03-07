@@ -112,7 +112,7 @@ export default {
         {
           icon: 'covid',
           title: this.$t('If you have any symptoms'),
-          link: '/flow',
+          link: 'http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#道民へ',
           divider: true
         },
         {
