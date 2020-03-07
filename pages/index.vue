@@ -37,16 +37,6 @@
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
-        <time-stacked-bar-chart
-          title="検査実施日別状況"
-          :chart-data="inspectionsGraph"
-          :date="Data.inspections_summary.date"
-          :items="inspectionsItems"
-          :labels="inspectionsLabels"
-          :unit="'人'"
-        />
-      </v-col>
-      <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="新型コロナコールセンター相談件数"
           :chart-data="contactsGraph"
@@ -93,29 +83,10 @@ export default {
     const patientsGraph = formatGraph(Data.patients_summary.data)
     // 感染者数
     const patientsTable = formatTable(Data.patients.data)
-    // 退院者グラフ
-    const dischargesGraph = formatGraph(Data.discharges_summary.data)
-    // 退院者数
-    const dischargesTable = formatTable(Data.discharges.data)
     // 相談件数
     const contactsGraph = formatGraph(Data.contacts.data)
     // 帰国者・接触者電話相談センター相談件数
     const querentsGraph = formatGraph(Data.querents.data)
-    // 検査実施日別状況
-    const inspectionsGraph = [
-      Data.inspections_summary.data['都内'],
-      Data.inspections_summary.data['その他']
-    ]
-    const inspectionsItems = [
-      '都内発生（疑い例・接触者調査）',
-      'その他（チャーター便・クルーズ便）'
-    ]
-    const inspectionsLabels = Data.inspections_summary.labels
-    // 死亡者数
-    // #MEMO: 今後使う可能性あるので一時コメントアウト
-    // const fatalitiesTable = formatTable(
-    //   Data.patients.data.filter(patient => patient['備考'] === '死亡')
-    // )
 
     const sumInfoOfPatients = {
       lText: patientsGraph[
@@ -129,13 +100,8 @@ export default {
       Data,
       patientsTable,
       patientsGraph,
-      dischargesTable,
-      dischargesGraph,
       contactsGraph,
       querentsGraph,
-      inspectionsGraph,
-      inspectionsItems,
-      inspectionsLabels,
       sumInfoOfPatients,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
