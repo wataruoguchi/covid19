@@ -32,7 +32,7 @@ export default {
   head() {
     return {
       link: [
-        { rel: 'canonical', href: `https://stopcovid19.metro.tokyo.lg.jp${this.$route.path}` },
+        { rel: 'canonical', href: `https://admiring-davinci-e0cd70.netlify.com${this.$route.path}` },
       ],
     };
   },
