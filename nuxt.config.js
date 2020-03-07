@@ -8,19 +8,19 @@ module.exports = {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s | 東京都 新型コロナウイルス対策サイト',
+    titleTemplate: '%s | 北海道 新型コロナウイルスまとめサイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、<a href="https://github.com/tokyo-metropolitan-gov/covid19">東京都公式 新型コロナウイルス対策サイト</a>をフォークしたものです。'
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '東京都 新型コロナウイルス対策サイト'
+        content: '北海道 新型コロナウイルスまとめサイト'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -31,12 +31,12 @@ module.exports = {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '東京都 新型コロナウイルス対策サイト'
+        content: '北海道 新型コロナウイルスまとめサイト'
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、<a href="https://github.com/tokyo-metropolitan-gov/covid19">東京都公式 新型コロナウイルス対策サイト</a>をフォークし、Code for Sapporoが開設したものです。'
       },
       {
         hid: 'og:image',
@@ -132,7 +132,7 @@ module.exports = {
   //   }
   // },
   manifest: {
-    "name": "東京都 新型コロナウイルス対策サイト",
+    "name": "北海道 新型コロナウイルスまとめサイト",
     "theme_color": "#00a040",
     "background_color": "#ffffff",
     "display": "standalone",

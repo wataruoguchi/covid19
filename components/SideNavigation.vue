@@ -3,8 +3,8 @@
     <div class="SideNavigation-HeadingContainer sp-flex">
       <v-icon
         class="SideNavigation-HeadingIcon sp-inline-block"
-        @click="openNavi"
         :aria-label="$t('Navi Open')"
+        @click="openNavi"
       >
         mdi-menu
       </v-icon>
@@ -26,8 +26,8 @@
     <div class="sp-none" :class="{ open: isNaviOpen }">
       <v-icon
         class="SideNavigation-ListContainerIcon sp-inline-block"
-        @click="closeNavi"
         :aria-label="$t('Navi Close')"
+        @click="closeNavi"
       >
         mdi-close
       </v-icon>
@@ -48,12 +48,17 @@
           <!-- <a href="https://line.me/R/ti/p/%40822sysfc" target="_blank" rel="noopener">
             <img src="/line.png" alt="LINE" />
           </a> -->
-          <a href="https://twitter.com/PrefHokkaido" target="_blank" rel="noopener">
+          <a
+            href="https://twitter.com/PrefHokkaido"
+            target="_blank"
+            rel="noopener"
+          >
             <img src="/twitter.png" alt="Twitter" />
           </a>
         </div>
         <small class="SideNavigation-Copyright" lang="en">
-          Copyright &copy; 2020 Tokyo Metropolitan Government. All Rights Reserved.
+          Copyright &copy; 2020 Tokyo Metropolitan Government. All Rights
+          Reserved.
         </small>
       </div>
     </div>
@@ -65,12 +70,12 @@
   "ja": {
     "Navi Open": "サイドメニュー項目を開く",
     "Navi Close": "サイドメニュー項目を閉じる",
-    "Tokyo": "東京都",
+    "Tokyo": "北海道",
     "COVID-19": "新型コロナウイルス",
     "Measures site": "対策サイト",
     "Tokyo Metropolitan Government": "東京都",
     "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
-    "The latest updates": "都内の最新感染動向",
+    "The latest updates": "道内の最新感染動向",
     "If you have any symptoms": "新型コロナウイルス感染症が心配なときに",
     "for Families with children": "お子様をお持ちの皆様へ",
     "for Citizens": "道民の皆様へ",
@@ -155,8 +160,8 @@ export default {
       ]
     },
     isClass() {
-      return item => item.title.charAt(0) === '【' ? 'kerningLeft' : ''
-    },
+      return item => (item.title.charAt(0) === '【' ? 'kerningLeft' : '')
+    }
   },
   methods: {
     openNavi() {

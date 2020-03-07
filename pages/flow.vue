@@ -41,10 +41,10 @@
         </div>
         <div class="Flow-Card-Parts">
           <div class="mx-2 mb-5">
-            <img src="/flow/sp/sp_flow_04@2x.png" alt="不安に思う方／微熱・軽い咳・感染の不安／新型コロナコールセンター　午前９時から午後９時（土日祝含む）" />
+            <img src="/flow/sp/sp_flow_04@2x.png" alt="不安に思う方／微熱・軽い咳・感染の不安／厚生労働省電話相談窓口　午前９時から午後９時（土日祝含む）" />
           </div>
           <div class="TelLink">
-            <a href="tel:0570550571"><img src="/flow/sp/sp_flow_tel_01@2x.png" alt="0570-550571" /></a>
+            <a href="tel:0120565653"><img src="/flow/sp/sp_flow_tel_01@2x.png" alt="0120-565653" /></a>
           </div>
           <div class="mt-4">
             <a href="#consult"><img src="/flow/sp/sp_flow_04_nav@2x.png" alt="専門的な助言が必要な場合"></a>
@@ -60,8 +60,8 @@
             <div class="SodanHeijitsu">
               <dt class="Heijitsu">平日（日中）</dt>
               <dd>
-                <a class="Link" href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html" target="_blank" rel="noopener">
-                  各保健所の電話番号は福祉保健局HPへ
+                <a class="Link" href="http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#相談窓口" target="_blank" rel="noopener">
+                  各保健所の電話番号は地域保健課ページへ
                   <v-icon size="16">
                     mdi-open-in-new
                   </v-icon>
@@ -69,8 +69,8 @@
               </dd>
             </div>
             <div class="SodanYakan">
-              <dt class="Yakan">平日（夜間）<br /><span class="SodanTime">午後５時から翌朝午前９時</span><br />土日祝 終日</dt>
-              <dd class="TelLink"><a href="tel:0353204592"><img src="/flow/sp/sp_flow_tel_03@2x.png" alt="03-5320-4592" /></a></dd>
+              <dt class="Yakan">土日祝日や夜間など<br /><span class="SodanTime">救急安心センターさっぽろ【受診相談】</span><br />24時間対応</dt>
+              <dd class="TelLink"><a href="tel:0112727119"><img src="/flow/sp/sp_flow_tel_03@2x.png" alt="011-272-7119" /></a></dd>
             </div>
           </dl>
         </div>
@@ -87,7 +87,7 @@
             </div>
           </div>
           <div class="mx-2 mb-5" id="pcr">
-            <img src="/flow/sp/sp_flow_06_02@2x.png" alt="PCR検査　東京都健康安全研究センター等" />
+            <img src="/flow/sp/sp_flow_06_02@2x.png" alt="PCR検査　保健所等" />
           </div>
           <div class="Col2Btn">
             <div class="mx-1 mb-5">
@@ -108,12 +108,12 @@
         </div>
       </div>
       <a
-        href="https://www.metro.tokyo.lg.jp/tosei/tosei/news/2019-ncov.html"
+        href="http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm"
         target="_blank"
         rel="nopenner"
         class="Flow-Card-Button"
       >
-        詳細を見る(東京都福祉保健局)
+        詳細を見る(道庁保健福祉部地域保健課)
         <v-icon class="Flow-Card-Button-ExternalLinkIcon" size="20">
           mdi-open-in-new
         </v-icon>

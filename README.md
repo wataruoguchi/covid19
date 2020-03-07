@@ -2,13 +2,37 @@
 
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 
-![東京都 新型コロナウイルス対策サイト](https://user-images.githubusercontent.com/11631697/75980865-a3d0fd80-5f26-11ea-9416-fa1c0b6d52c2.png)
+<img src="resources/illust_19vs39_1.jpg" width="700">
 
+Illustration by [LITTLEKIT](https://twitter.com/LITTLEKIT)
+
+## Goal
+東京都庁による[新型コロナウイルス感染症対策サイト](https://stopcovid19.metro.tokyo.lg.jp/)の北海道版をつくるべや
+
+![Tokyo](resources/tokyo_covid19.gif)
+
+<img src="https://user-images.githubusercontent.com/4961152/76084221-bd3f7b80-5ff2-11ea-81e6-865f49ddb746.png" width="500">
+
+[北海道版稼働イメージ(適宜更新)](https://docs.google.com/presentation/d/1IX5BiHa_Ukv7rulCf0RxOZpNoZmWXIvyRYFgXxg3zS8/edit?usp=sharing)
 
 ## How to Contribute / 貢献の仕方
-Issues にあるいろいろな修正にご協力いただけると嬉しいです。
+[Issues](https://github.com/codeforsapporo/covid19/issues) にあるいろいろな修正にご協力いただけると嬉しいです。
 
-詳しくは[How to contribute](https://github.com/tokyo-metropolitan-gov/covid19/wiki/How-to-contribute)を御覧ください。
+Code for Sapporo のSlackでも情報共有を行っています。加入は[こちらからどうぞ](https://www.codeforsapporo.org/slack/)
+
+本プロジェクトに関係するチャンネルは下記になります。
+```
+全般の相談
+#0201covid19hkd_all
+システム関係
+#0202covid19hkd_sys
+データ関係
+#0203covid19hkd_data
+Githubのissueメンション
+#0204covid19hkd_notify
+```
+
+その他の詳しい情報は[How to contribute(東京版)](https://github.com/tokyo-metropolitan-gov/covid19/blob/development/.github/CONTRIBUTING.md)を御覧ください。
 
 All contributions are welcome!
 Please check [How to contribute](https://github.com/tokyo-metropolitan-gov/covid19/wiki/How-to-contribute) for details.
