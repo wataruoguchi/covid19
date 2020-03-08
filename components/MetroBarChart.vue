@@ -1,5 +1,5 @@
 <template>
-  <data-view :title="title" :date="date" :source-from="sourceFrom">
+  <data-view :title="title" :date="date" :source-from="sourceFrom" :source-link="sourceLink">
     <template v-slot:button>
       <p class="MetroGraph-Desc">
         {{ chartData.base_period }}の利用者数*の平均値を100としたときの相対値
@@ -49,6 +49,11 @@ export default {
       default: ''
     },
     sourceFrom: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    sourceLink: {
       type: String,
       required: false,
       default: ''

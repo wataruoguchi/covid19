@@ -17,6 +17,8 @@
           title="陽性患者数"
           :chart-data="patientsGraph"
           :date="Data.patients.date"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
         />
       </v-col>
@@ -26,6 +28,8 @@
           :chart-data="patientsTable"
           :chart-option="{}"
           :date="Data.patients.date"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
         />
       </v-col>
@@ -34,6 +38,8 @@
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
           :date="Data.contacts.date"
+          sourceFrom="札幌市役所webサイト"
+          sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
           :unit="'件'"
         />
       </v-col>
@@ -42,6 +48,8 @@
           title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
           :date="Data.querents.date"
+          sourceFrom="札幌市役所webサイト"
+          sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
           :unit="'件'"
         />
       </v-col>

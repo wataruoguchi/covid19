@@ -23,8 +23,11 @@
     >
       {{ date }} 更新
     </v-footer>
-    <v-footer v-else class="DataView-Footer">
+    <v-footer v-else-if="sourceLink === ''" class="DataView-Footer">
       {{ date }} 更新 <v-spacer /> 出典: {{ sourceFrom }}
+    </v-footer>
+    <v-footer v-else class="DataView-Footer">
+      {{ date }} 更新 <v-spacer /> <a class="DataView-Link" target="_blank" :href="sourceLink">出典: {{ sourceFrom }} <v-icon size="15">mdi-open-in-new</v-icon></a>
     </v-footer>
   </v-card>
 </template>
@@ -37,7 +40,8 @@ export default class DataView extends Vue {
   @Prop() private title!: string
   @Prop() private date!: string
   @Prop() private info!: any
-  @Prop() private sourceFrom!: string // FIXME expect info as {lText:string, sText:string unit:string}
+  @Prop() private sourceFrom!: string
+  @Prop() private sourceLink!: string// FIXME expect info as {lText:string, sText:string unit:string}
 }
 </script>
 
@@ -100,6 +104,11 @@ export default class DataView extends Vue {
     margin: 2px 4px 12px;
     flex-direction: row-reverse;
     @include font-size(12);
+    color: $gray-3 !important;
+    text-decoration: none;
+  }
+  &-Link {
+    text-decoration: none;
     color: $gray-3 !important;
   }
 }
