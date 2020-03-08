@@ -3,27 +3,22 @@
     <page-header
       :icon="headerItem.icon"
       :title="headerItem.title"
-      :date="headerItem.date"
+      :date="fromdatatodate(headerItem.date)"
     />
     <whats-new
       class="mb-4"
-      date="2020年3月3日"
-      url="https://www.metro.tokyo.lg.jp/tosei/hodohappyo/press/2020/03/03/28.html"
-      text="新型コロナウイルスに関連した患者の発生について（第65報）"
-    />
-    <StaticInfo
-      class="mb-4"
-      :url="'/flow'"
-      :text="'自分や家族の症状に不安や心配があればまずは電話相談をどうぞ'"
-      :btn-text="'相談の手順を見る'"
+      date="2020年3月7日"
+      url="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijyoukyou0308yousei_0307genzai.pdf"
+      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.7現在）"
     />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="陽性患者数"
           :chart-data="patientsGraph"
-          :chart-option="option"
-          :date="Data.patients.date"
+          :date="fromdatatodate(Data.patients.date)"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
         />
       </v-col>
@@ -32,26 +27,29 @@
           :title="'陽性患者の属性'"
           :chart-data="patientsTable"
           :chart-option="{}"
-          :date="Data.patients.date"
+          :date="fromdatatodate(Data.patients.date)"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
         />
       </v-col>
-
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="新型コロナコールセンター相談件数"
+          title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
-          :chart-option="option"
-          :date="Data.contacts.date"
+          :date="fromdatatodate(Data.contacts.date)"
+          sourceFrom="札幌市役所webサイト"
+          sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
           :unit="'件'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="帰国者・接触者電話相談センター相談件数"
+          title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
-          :chart-option="option"
-          :date="Data.querents.date"
+          :date="fromdatatodate(Data.querents.date)"
+          sourceFrom="札幌市役所webサイト"
+          sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
           :unit="'件'"
         />
       </v-col>
@@ -62,44 +60,39 @@
 <script>
 import PageHeader from '@/components/PageHeader.vue'
 import TimeBarChart from '@/components/TimeBarChart.vue'
+import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
 import Data from '@/data/data.json'
 import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
+import SvgCard from '@/components/SvgCard.vue'
 
 export default {
   components: {
     PageHeader,
     TimeBarChart,
+    TimeStackedBarChart,
     WhatsNew,
     StaticInfo,
-    DataTable
+    DataTable,
+    SvgCard
   },
   data() {
     // 感染者数グラフ
     const patientsGraph = formatGraph(Data.patients_summary.data)
     // 感染者数
     const patientsTable = formatTable(Data.patients.data)
-    // 退院者グラフ
-    const dischargesGraph = formatGraph(Data.discharges_summary.data)
-    // 退院者数
-    const dischargesTable = formatTable(Data.discharges.data)
     // 相談件数
     const contactsGraph = formatGraph(Data.contacts.data)
     // 帰国者・接触者電話相談センター相談件数
     const querentsGraph = formatGraph(Data.querents.data)
-    // 死亡者数
-    // #MEMO: 今後使う可能性あるので一時コメントアウト
-    // const fatalitiesTable = formatTable(
-    //   Data.patients.data.filter(patient => patient['備考'] === '死亡')
-    // )
 
     const sumInfoOfPatients = {
       lText: patientsGraph[
         patientsGraph.length - 1
-      ].cummulative.toLocaleString(),
+      ].cumulative.toLocaleString(),
       sText: patientsGraph[patientsGraph.length - 1].label + 'の累計',
       unit: '人'
     }
@@ -108,15 +101,13 @@ export default {
       Data,
       patientsTable,
       patientsGraph,
-      dischargesTable,
-      dischargesGraph,
       contactsGraph,
       querentsGraph,
       sumInfoOfPatients,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
-        title: '都内の最新感染動向',
-        date: Data.lastUpdate
+        title: '道内の最新感染動向',
+        date: Data.last_update
       },
       option: {
         tooltips: {
@@ -168,7 +159,20 @@ export default {
   },
   head() {
     return {
-      title: '都内の最新感染動向'
+      title: '道内の最新感染動向'
+    }
+  },
+  methods: {
+    fromdatatodate(data){
+      const dateint = Date.parse(data)
+      const date = new Date(dateint)
+      const month = ("0"+(date.getMonth() + 1)).slice(-2)
+      const day =  ("0"+date.getDate()).slice(-2)
+      const hour =  ("0"+date.getHours()).slice(-2)
+      const min =  ("0"+date.getMinutes()).slice(-2)
+      const sec =  ("0"+date.getSeconds()).slice(-2)
+      const datestr = date.getFullYear() + '/' + month + '/' + day + ' ' + hour + ':' + min + ':' + sec
+      return datestr
     }
   }
 }

@@ -10,10 +10,25 @@
       <v-spacer />
       <slot name="infoPanel" />
     </v-toolbar>
-    <v-card-text class="DataView-CardText">
+    <v-card-text
+      :class="
+        $vuetify.breakpoint.xs ? 'DataView-CardTextForXS' : 'DataView-CardText'
+      "
+    >
       <slot />
     </v-card-text>
-    <v-footer class="DataView-Footer"> {{ date }} 更新 </v-footer>
+    <v-footer
+      v-if="sourceFrom === '' || sourceFrom === undefined"
+      class="DataView-Footer"
+    >
+      {{ date }} 更新
+    </v-footer>
+    <v-footer v-else-if="sourceLink === ''" class="DataView-Footer">
+      {{ date }} 更新 <v-spacer /> 出典: {{ sourceFrom }}
+    </v-footer>
+    <v-footer v-else class="DataView-Footer">
+      {{ date }} 更新 <v-spacer /> <a class="DataView-Link" target="_blank" rel="noopener" :href="sourceLink">出典: {{ sourceFrom }} <v-icon size="15">mdi-open-in-new</v-icon></a>
+    </v-footer>
   </v-card>
 </template>
 
@@ -24,7 +39,9 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 export default class DataView extends Vue {
   @Prop() private title!: string
   @Prop() private date!: string
-  @Prop() private info!: any // FIXME expect info as {lText:string, sText:string unit:string}
+  @Prop() private info!: any
+  @Prop() private sourceFrom!: string
+  @Prop() private sourceLink!: string// FIXME expect info as {lText:string, sText:string unit:string}
 }
 </script>
 
@@ -47,7 +64,7 @@ export default class DataView extends Vue {
     &-date {
       font-size: 12px;
       line-height: 12px;
-      color: #808080;
+      color: $gray-3;
       width: 100%;
       display: inline-block;
     }
@@ -75,7 +92,11 @@ export default class DataView extends Vue {
   }
   &-CardText {
     margin-bottom: 46px;
-    margin-top: 20px;
+    margin-top: 35px;
+  }
+  &-CardTextForXS {
+    margin-bottom: 46px;
+    margin-top: 70px;
   }
   &-Footer {
     background-color: $white !important;
@@ -83,6 +104,11 @@ export default class DataView extends Vue {
     margin: 2px 4px 12px;
     flex-direction: row-reverse;
     @include font-size(12);
+    color: $gray-3 !important;
+    text-decoration: none;
+  }
+  &-Link {
+    text-decoration: none;
     color: $gray-3 !important;
   }
 }

@@ -90,7 +90,7 @@
         .j,
         .o,
         .v {
-          fill: #00a040;
+          fill: #4593FF;
         }
 
         .k,
@@ -153,7 +153,7 @@
 
         .ab,
         .x {
-          stroke: #00a040;
+          stroke: #4593FF;
         }
 
         .ak,
@@ -929,7 +929,7 @@
       </g>
       <g transform="translate(0 -19)">
         <g transform="translate(19 5)">
-          <a xlink:href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html" target="_blank">
+          <a xlink:href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html" target="_blank" rel="noopener">
             <text class="c" transform="translate(803 311)" style="">
               <tspan x="0" y="0">各保健所の電話番号は</tspan>
               <tspan x="0" y="22">福祉保健局HPへ</tspan>

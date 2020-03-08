@@ -20,16 +20,16 @@ export default {
         {
           title: '1 感染予防・健康管理',
           body:
-            '〇　不特定多数の人の集まる場所等への外出を避け、基本的に自宅で過ごしてください。<br />〇　手洗い、咳エチケット等により、感染予防に努めてください。<br />　<a href="https://tokyodouga.jp/lViN9C_BS-0.html" target="_blank">【参考】感染症予防のための正しい手洗い方法（動画）</a> <br />〇　規則正しい生活を心がけ、日常の健康管理に十分気を付けてください。'
+            '<ul><li>不特定多数の人の集まる場所等への外出を避け、基本的に自宅で過ごしてください。</li><li>手洗い、咳エチケット等により、感染予防に努めてください。 <a href="http://www.pref.hokkaido.lg.jp/hf/kth/tearai.pdf" target="_blank" rel="noopener">正しい手の洗い方</a></li><li>規則正しい生活を心がけ、日常の健康管理に十分気を付けてください。</li></ul>'
         },
         {
           title: '2 感染症を疑う場合の対応',
           body:
-            '〇　風邪の症状や、37.5度以上の発熱が４日以上続いている、強いだるさ（倦怠感）、息苦しさ（呼吸困難）がある場合は、各保健所にご相談ください。<br />〇  「新型コロナウイルス感染症にかかる相談窓口について」（東京都福祉保健局）<br /><a href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html" target="_blank">https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html</a>'
+            '<ul><li>風邪の症状や、37.5度以上の発熱が４日以上続いている、強いだるさ（倦怠感）、息苦しさ（呼吸困難）がある場合は、各保健所にご相談ください。</li><li>相談窓口及び帰国者・接触者相談センターについて<br /><a href="http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#%E7%9B%B8%E8%AB%87%E7%AA%93%E5%8F%A3" target="_blank" rel="noopener">http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#%E7%9B%B8%E8%AB%87%E7%AA%93%E5%8F%A3</a></li></ul>'
         },
         {
           title: '3 その他',
-          body: '〇  詳細は、各学校からのお知らせ等をご確認ください。'
+          body: '<ul><li>詳細は、各学校からのお知らせ等をご確認ください。</li></ul>'
         }
       ]
     }
@@ -41,7 +41,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .Parent {
   &-Heading {
     @include font-size(30);
@@ -49,5 +49,8 @@ export default {
     color: $gray-2;
     margin-bottom: 12px;
   }
+}
+a {
+  @include text-link();
 }
 </style>

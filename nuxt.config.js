@@ -8,41 +8,60 @@ module.exports = {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s | 東京都 新型コロナウイルス対策サイト',
-    title: '',
+    titleTemplate: '%s | 北海道 新型コロナウイルスまとめサイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、<a href="https://github.com/tokyo-metropolitan-gov/covid19">東京都公式 新型コロナウイルス対策サイト</a>をフォークしたものです。'
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '東京都 新型コロナウイルス対策サイト'
+        content: '北海道 新型コロナウイルスまとめサイト'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp'
+        content: 'https://stopcovid19.hokkaido.dev'
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '東京都 新型コロナウイルス対策サイト'
+        content: '北海道 新型コロナウイルスまとめサイト'
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、<a href="https://github.com/tokyo-metropolitan-gov/covid19">東京都公式 新型コロナウイルス対策サイト</a>をフォークし、Code for Sapporoが開設したものです。'
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
+        content: 'https://stopcovid19.hokkaido.dev/ogp.png'
+      },
+      {
+        hid: 'fb:app_id',
+        property: 'fb:app_id',
+        content: '503748220262414'
+      },
+      {
+        hid: 'twitter:card',
+        property: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:site',
+        property: 'twitter:site',
+        content: '@just_douit'
+      },
+      {
+        hid: 'twitter:player',
+        property: 'twitter:player',
+        content: '@just_douit'
       }
     ],
     link: [
@@ -96,10 +115,10 @@ module.exports = {
             iso: 'ja_JP'
           }
         ],
-        formatFallbackMessages: true,
         defaultLocale: 'ja',
         vueI18n: {
-          fallbackLocale: 'ja'
+          fallbackLocale: 'ja',
+          formatFallbackMessages: true
         },
         vueI18nLoader: true
       }
@@ -120,7 +139,7 @@ module.exports = {
     theme: {}
   },
   googleAnalytics: {
-    id: 'UA-159417676-1'
+    id: 'UA-159982743-1'
   },
   // /*
   // ** Build configuration
@@ -133,8 +152,8 @@ module.exports = {
   //   }
   // },
   manifest: {
-    "name": "東京都 新型コロナウイルス対策サイト",
-    "theme_color": "#00a040",
+    "name": "北海道 新型コロナウイルスまとめサイト",
+    "theme_color": "#4593FF",
     "background_color": "#ffffff",
     "display": "standalone",
     "Scope": "/",
@@ -144,4 +163,12 @@ module.exports = {
   generate: {
     fallback: true
   },
+  // /*
+  // ** hot read configuration for docker
+  // */
+  watchers: {
+    webpack: {
+      poll: true
+    }
+  }
 }

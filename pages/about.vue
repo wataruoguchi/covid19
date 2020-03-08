@@ -4,9 +4,11 @@
       当サイトについて
     </h2>
     <TextCard>
-      当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。<br />
+      当サイトは、道内の新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために作成されました。開発は、ICTエンジニアやデザイナーなどによって結成された「JUST道IT」が行っています。<br />
       <br />
-      東京都による公式情報と客観的な数値をわかりやすく伝えることで、東京都にお住まいの方や、東京都内に拠点を持つ企業の方、東京都を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。
+      複製・改変が許されたオープンソースライセンスで公開されている、<a target="_blank" href="https://stopcovid19.metro.tokyo.lg.jp/">東京都公式新型コロナウイルス対策サイト</a>の<a target="_blank" href="https://github.com/tokyo-metropolitan-gov/covid19" rel="noopener">仕組み</a>を利用しています。<br />
+      <br />
+      北海道による公式情報と客観的な数値をわかりやすく伝えることで、北海道にお住まいの方や、北海道内に拠点を持つ企業の方、北海道を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。
     </TextCard>
     <TextCard title="ブラウザ環境について">
       当サイトは以下の環境でご覧いただくことを推奨いたします。<br />
@@ -36,7 +38,7 @@
       <br />
       ただし、クッキーを受け入れない設定をされている場合は、当サイトの機能が正常に動作しない場合がございます。
     </TextCard>
-    <TextCard title="GoogleAnalytics の利用について">
+    <TextCard title="Google Analyticsの利用について">
       当サイトでは、サービス向上やWebサイトの改善のためにGoogle Inc.の提供するアクセス分析のツールであるGoogle Analyticsを利用した計測を行っております。<br />
       Google Analyticsは、当サイトが発行するクッキー(Cookie)を利用して、個人を特定する情報を含まずにWebサイトの利用データ（アクセス状況、トラフィック、閲覧環境など）を収集しております。クッキー(Cookie)の利用に関してはGoogleのプライバシーポリシーと規約に基づいております。<br />
       取得したデータはWebサイト利用状況の分析、サイト運営者へのレポートの作成、その他のサービスの提供に関わる目的に限り、これを使用します。<br />
@@ -44,37 +46,40 @@
       Google Analyticsの利用規約及びプライバシーポリシーに関する説明については、Google Analyticsのサイトをご覧ください。<br />
       <ul>
         <li>
-          <a href="https://marketingplatform.google.com/about/analytics/terms/jp" target="_blank">
+          <a href="https://marketingplatform.google.com/about/analytics/terms/jp" target="_blank" rel="noopener">
             Google Analytics利用規約
           </a>
         </li>
         <li>
-          <a href="https://policies.google.com/privacy?hl=ja" target="_blank">
+          <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">
             Googleのプライバシーポリシー
           </a>
         </li>
         <li>
-          <a href="https://support.google.com/analytics/answer/6004245" target="_blank">
+          <a href="https://support.google.com/analytics/answer/6004245" target="_blank" rel="noopener">
             Google Analyticsに関する詳細情報
           </a>
         </li>
       </ul>
     </TextCard>
     <TextCard title="免責事項">
-      当サイトに掲載されている情報の正確性については万全を期していますが、東京都は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。<br />
+      当サイトに掲載されている情報については、北海道または札幌市によって公開されたデータですが、北海道および札幌市、当サイトの開発者・関係者は、利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。<br />
       <br />
       また、利用者が当サイトを利用したことにより発生した利用者の損害及び利用者が第三者に与えた損害に対して、責任を負うものではありません。<br />
       <br />
       当サイトに掲載されている情報は、予告なしに変更又は削除することがあります。
     </TextCard>
-    <TextCard title="データについて">
-      当サイトで公表しているデータは、東京都オープンデータサイト(準備中)より誰でも自由にダウンロードが可能です。
+    <TextCard title="JUST道ITへ参加したい">
+      JUST道ITでの取り組みに共感し、開発・運営に参加を希望される方は、<a target="_blank" href="https://www.codeforsapporo.org/slack/" rel="noopener">Code for Sapporo Slack ワークグループ</a>よりご参加ください。
     </TextCard>
-
-    <TextCard title="お問い合わせ先（都のHPサイトポリシーについて）">
-      東京都生活文化局広報広聴部広報課<br />
-      電話　
-      <a href="tel:03-5388-3085">03-5388-3085</a>
+    <!-- カタログサイトリンクおよびお問い合わせ先は現時点では表示しない
+    <TextCard title="データについて">
+      当サイトで公表しているデータは、北海道オープンデータカタログサイト(準備中)より誰でも自由にダウンロードが可能です。
+    </TextCard>
+    -->
+    <TextCard title="お問い合わせ先">
+      当サイトについてのお問い合わせは<br />
+      <a target="_blank" href="https://www.facebook.com/JUST道IT-106299527656125/" rel="noopener">JUST道IT Facebookページ</a>までお願いします。
     </TextCard>
   </div>
 </template>
@@ -94,7 +99,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .About {
   &-Heading {
     @include font-size(30);
@@ -102,5 +107,9 @@ export default {
     color: $gray-2;
     margin-bottom: 12px;
   }
+}
+
+a {
+  @include text-link();
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <data-view :title="title" :date="date">
+  <data-view :title="title" :date="date" :source-from="sourceFrom" :source-link="sourceLink">
     <template v-slot:button>
       <span />
     </template>
@@ -8,16 +8,16 @@
       :items="chartData.datasets"
       :items-per-page="-1"
       :hide-default-footer="true"
-      :height="200"
+      :height="300"
       :fixed-header="true"
       :mobile-breakpoint="0"
       class="cardTable"
     />
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
-        :lText=info.lText
-        :sText=info.sText
-        :unit=info.unit
+        :l-text="info.lText"
+        :s-text="info.sText"
+        :unit="info.unit"
       />
     </template>
   </data-view>
@@ -81,6 +81,16 @@ export default {
       type: Object,
       required: false,
       default: () => {}
+    },
+    sourceFrom: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    sourceLink: {
+      type: String,
+      required: false,
+      default: ''
     }
   }
 }

@@ -1,26 +1,52 @@
-# 東京都 新型コロナウイルス対策サイト
+# 新型コロナウイルス感染症対策サイト北海道版
 
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 
-![東京都 新型コロナウイルス対策サイト](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)
+<img src="resources/illust_19vs39_1.jpg" width="300">
 
+Illustration by [LITTLEKIT](https://twitter.com/LITTLEKIT) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.ja)
+
+## Goal
+東京都庁による[新型コロナウイルス感染症対策サイト](https://stopcovid19.metro.tokyo.lg.jp/)の北海道版をつくるべや
+
+![Tokyo](resources/tokyo_covid19.gif)
+
+
+<img src="https://user-images.githubusercontent.com/4961152/76155868-a48bae80-6135-11ea-9fdb-7c91a925f9f5.png" width="500">
+
+[北海道版稼働イメージ(適宜更新)](https://docs.google.com/presentation/d/1IX5BiHa_Ukv7rulCf0RxOZpNoZmWXIvyRYFgXxg3zS8/edit?usp=sharing)
 
 ## How to Contribute / 貢献の仕方
-Issues にあるいろいろな修正にご協力いただけると嬉しいです。
+[Issues](https://github.com/codeforsapporo/covid19/issues) にあるいろいろな修正にご協力いただけると嬉しいです。
 
-詳しくは[How to contribute](https://github.com/tokyo-metropolitan-gov/covid19/wiki/How-to-contribute)を御覧ください。
+Code for Sapporo のSlackでも情報共有を行っています。加入は[こちらからどうぞ](https://www.codeforsapporo.org/slack/)
+
+本プロジェクトに関係するチャンネルは下記になります。
+```
+全般の相談
+#0201covid19hkd_all
+システム関係
+#0202covid19hkd_sys
+データ関係
+#0203covid19hkd_data
+Githubのissueメンション
+#0204covid19hkd_notify
+```
+
+その他の詳しい情報は[How to contribute(東京版)](https://github.com/tokyo-metropolitan-gov/covid19/blob/development/.github/CONTRIBUTING.md)を御覧ください。
 
 All contributions are welcome!
 Please check [How to contribute](https://github.com/tokyo-metropolitan-gov/covid19/wiki/How-to-contribute) for details.
 
 ## License / ライセンス
-本ソフトウェアは、MITライセンスの元提供されています。
-This software is released under the MIT License,
+本ソフトウェアは、MITライセンスの元提供されています。 
+This software is released under the MIT License.
 
-## 開発者向け情報
+## For Developers / 開発者向け情報
 
-### 環境構築の手順
+### How to Set Up Environments / 環境構築の手順
 
+**Use yarn / yarn を使う場合**
 ``` bash
 # install dependencies
 $ yarn install
@@ -29,22 +55,29 @@ $ yarn install
 $ yarn dev
 ```
 
-### ステージング/本番環境への反映
+**Use docker / docker compose を使う場合**
+```bash 
+# serve with hot reload at localhost:3000
+$ docker-compose up
+```
 
-`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.metro.tokyo.lg.jp/ が更新されます。
+### Deployment to Staging & Production Environments / ステージング・本番環境への反映
 
-`staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト https://stg-covid19-tokyo.netlify.com/ が更新されます。
+`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.hokkaido.dev が更新されます。
 
-`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://dev-covid19-tokyo.netlify.com/ が更新されます。
+`staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト http://133.242.52.161:50080 が更新されます。（環境未構築）
+
+`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト http://133.242.52.161:58000 が更新されます。
 
 
-If `master` branch is updated, the script will build html files to `production` branch.
-It will also update the production site https://stopcovid19.metro.tokyo.lg.jp/ .
 
-If `staging` branch is updated, the script will build html files to `gh-pages` branch.
-It will also update the staging site https://stg-covid19-tokyo.netlify.com/ .
+When `master` branch is updated, the HTML files will be automatically built onto `production` branch,
+and then the production site (https://stopcovid19.hokkaido.dev) will be also updated.（under construction）
 
-If `development` branch is updated, the script will build html files to `dev-pages` branch.
-It will also update the development site https://dev-covid19-tokyo.netlify.com/ .
+When `staging` branch is updated, the HTML files will be automatically built onto `gh-pages` branch,
+and then the staging site (http://133.242.52.161:50080) will be also updated.（under construction）
+
+When `development` branch is updated, the HTML files will be automatically built onto `dev-pages` branch,
+and then the development site (http://133.242.52.161:58000) will be also updated.
 
 
