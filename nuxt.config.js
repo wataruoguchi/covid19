@@ -15,7 +15,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、<a href="https://github.com/tokyo-metropolitan-gov/covid19">東京都公式 新型コロナウイルス対策サイト</a>をフォークしたものです。'
+        content: '当サイトは、道内の新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために作成されました。開発は、ICTエンジニアやデザイナーなどによって結成された「JUST道IT」が行っています。複製・改変が許されたオープンソースライセンスで公開されている、東京都公式新型コロナウイルス対策サイト（https://stopcovid19.metro.tokyo.lg.jp/）の仕組みを利用しています。'
       },
       {
         hid: 'og:site_name',
@@ -36,7 +36,7 @@ module.exports = {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、<a href="https://github.com/tokyo-metropolitan-gov/covid19">東京都公式 新型コロナウイルス対策サイト</a>をフォークし、Code for Sapporoが開設したものです。'
+        content: '当サイトは、道内の新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために作成されました。開発は、ICTエンジニアやデザイナーなどによって結成された「JUST道IT」が行っています。複製・改変が許されたオープンソースライセンスで公開されている、東京都公式新型コロナウイルス対策サイト（https://stopcovid19.metro.tokyo.lg.jp/）の仕組みを利用しています。'
       },
       {
         hid: 'og:image',
