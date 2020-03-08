@@ -3,7 +3,7 @@
     <page-header
       :icon="headerItem.icon"
       :title="headerItem.title"
-      :date="headerItem.date"
+      :date="fromdatatodate(headerItem.date)"
     />
     <whats-new
       class="mb-4"
@@ -107,7 +107,7 @@ export default {
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
         title: '道内の最新感染動向',
-        date: Data.lastUpdate
+        date: Data.last_update
       },
       option: {
         tooltips: {
