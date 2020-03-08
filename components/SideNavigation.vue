@@ -49,11 +49,23 @@
             <img src="/line.png" alt="LINE" />
           </a> -->
           <a
-            href="https://twitter.com/PrefHokkaido"
+            href="https://twitter.com/Just_douit"
             target="_blank"
             rel="noopener"
           >
-            <img src="/twitter.png" alt="Twitter" />
+            <img src="/twitter.png" width="90px" height="90px" alt="Twitter" />
+          </a>
+          <a
+            href="https://www.facebook.com/JUST道IT-106299527656125"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/facebook.png"
+              width="90px"
+              height="90px"
+              alt="Facebook"
+            />
           </a>
         </div>
       </div>
@@ -68,7 +80,7 @@
     "Navi Close": "サイドメニュー項目を閉じる",
     "Tokyo": "北海道",
     "COVID-19": "新型コロナウイルス",
-    "Measures site": "対策サイト",
+    "Measures site": "まとめサイト",
     "Tokyo Metropolitan Government": "東京都",
     "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
     "The latest updates": "道内の最新感染動向",
@@ -79,7 +91,8 @@
     "Official statements from Task Force": "北海道感染症危機管理対策本部会議",
     "Government official website": "北海道公式ホームページ",
     "Message from Governor Suzuki": "知事からのメッセージ",
-    "About us": "当サイトについて"
+    "About us": "当サイトについて",
+    "Government official Twitter": "北海道公式Twitter"
   }
 }
 </i18n>
@@ -108,7 +121,8 @@ export default {
         {
           icon: 'covid',
           title: this.$t('If you have any symptoms'),
-          link: 'http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#道民へ',
+          link:
+            'http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#道民へ',
           divider: true
         },
         {
@@ -150,7 +164,11 @@ export default {
         },
         {
           title: this.$t('Government official website'),
-          link: 'http://www.pref.hokkaido.lg.jp/index.htm',
+          link: 'http://www.pref.hokkaido.lg.jp/index.htm'
+        },
+        {
+          title: this.$t('Government official Twitter'),
+          link: 'https://twitter.com/PrefHokkaido',
           divider: true
         }
       ]

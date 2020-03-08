@@ -42,6 +42,26 @@ module.exports = {
         hid: 'og:image',
         property: 'og:image',
         content: 'https://stopcovid19.hokkaido.dev/ogp.png'
+      },
+      {
+        hid: 'fb:app_id',
+        property: 'fb:app_id',
+        content: '503748220262414'
+      },
+      {
+        hid: 'twitter:card',
+        property: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:site',
+        property: 'twitter:site',
+        content: '@just_douit'
+      },
+      {
+        hid: 'twitter:player',
+        property: 'twitter:player',
+        content: '@just_douit'
       }
     ],
     link: [
