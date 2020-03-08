@@ -6,7 +6,7 @@
     <TextCard>
       当サイトは、道内の新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために作成されました。開発は、ICTエンジニアやデザイナーなどによって結成された「JUST道IT」が行っています。<br />
       <br />
-      複製・改変が許されたオープンソースライセンスで公開されている、<a href="https://stopcovid19.metro.tokyo.lg.jp/">東京都公式新型コロナウイルス対策サイト</a>の<a href="https://github.com/tokyo-metropolitan-gov/covid19">仕組み</a>を利用しています。<br />
+      複製・改変が許されたオープンソースライセンスで公開されている、<a target="_blank" href="https://stopcovid19.metro.tokyo.lg.jp/">東京都公式新型コロナウイルス対策サイト</a>の<a target="_blank" href="https://github.com/tokyo-metropolitan-gov/covid19">仕組み</a>を利用しています。<br />
       <br />
       北海道による公式情報と客観的な数値をわかりやすく伝えることで、北海道にお住まいの方や、北海道内に拠点を持つ企業の方、北海道を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。
     </TextCard>
@@ -70,7 +70,7 @@
       当サイトに掲載されている情報は、予告なしに変更又は削除することがあります。
     </TextCard>
     <TextCard title="JUST道ITへ参加したい">
-      JUST道ITでの取り組みに共感し、開発・運営に参加を希望される方は、<a href="https://www.codeforsapporo.org/slack/">Code for Sapporo Slack ワークグループ</a>よりご参加ください。
+      JUST道ITでの取り組みに共感し、開発・運営に参加を希望される方は、<a target="_blank" href="https://www.codeforsapporo.org/slack/">Code for Sapporo Slack ワークグループ</a>よりご参加ください。
     </TextCard>
     <!-- カタログサイトリンクおよびお問い合わせ先は現時点では表示しない
     <TextCard title="データについて">
@@ -79,7 +79,7 @@
     -->
     <TextCard title="お問い合わせ先">
       当サイトについてのお問い合わせは<br />
-      <a href="https://www.facebook.com/JUST道IT-106299527656125/">JUST道IT</a>Facebookページまでお願いします。
+      <a target="_blank" href="https://www.facebook.com/JUST道IT-106299527656125/">JUST道IT Facebookページ</a>までお願いします。
     </TextCard>
   </div>
 </template>
