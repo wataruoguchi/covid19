@@ -4,7 +4,7 @@
 
 <img src="resources/illust_19vs39_1.jpg" width="300">
 
-Illustration by [LITTLEKIT](https://twitter.com/LITTLEKIT)
+Illustration by [LITTLEKIT](https://twitter.com/LITTLEKIT) under CC BY 4.0
 
 ## Goal
 東京都庁による[新型コロナウイルス感染症対策サイト](https://stopcovid19.metro.tokyo.lg.jp/)の北海道版をつくるべや
