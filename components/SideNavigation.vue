@@ -56,7 +56,7 @@
             <img src="/twitter.png" width="90px" height="90px" alt="Twitter" />
           </a>
           <a
-            href="https://www.facebook.com/JUST道IT-106299527656125"
+            href="https://www.facebook.com/Justdouit19/"
             target="_blank"
             rel="noopener"
           >
