@@ -79,7 +79,7 @@
     -->
     <TextCard title="お問い合わせ先">
       当サイトについてのお問い合わせは<br />
-      <a target="_blank" href="https://www.facebook.com/JUST道IT-106299527656125/" rel="noopener">JUST道IT Facebookページ</a>までお願いします。
+      <a target="_blank" href="https://www.facebook.com/Justdouit19/" rel="noopener">JUST道IT Facebookページ</a>までお願いします。
     </TextCard>
   </div>
 </template>
