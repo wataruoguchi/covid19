@@ -20,6 +20,7 @@
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
+          :defaultDataKind="'cumulative'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
