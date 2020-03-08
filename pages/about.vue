@@ -74,13 +74,11 @@
     <TextCard title="データについて">
       当サイトで公表しているデータは、北海道オープンデータカタログサイト(準備中)より誰でも自由にダウンロードが可能です。
     </TextCard>
-
-    <TextCard title="お問い合わせ先（都のHPサイトポリシーについて）">
-      東京都生活文化局広報広聴部広報課<br />
-      電話　
-      <a href="tel:03-5388-3085">03-5388-3085</a>
-    </TextCard>
     -->
+    <TextCard title="お問い合わせ先">
+      当サイトについてのお問い合わせは<br />
+      <a href="https://www.facebook.com/JUST道IT-106299527656125/">JUST道IT</a>Facebookページまでお願いします。
+    </TextCard>
   </div>
 </template>
 
