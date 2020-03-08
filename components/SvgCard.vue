@@ -1,5 +1,5 @@
 <template>
-  <data-view :title="title" :date="date">
+  <data-view :title="title" :date="date" :source-from="sourceFrom">
     <img class="CardImg" :src="srcUrl" />
   </data-view>
 </template>
@@ -25,6 +25,10 @@ export default {
       default: ''
     },
     srcUrl: {
+      type: String,
+      default: ''
+    },
+    sourceFrom: {
       type: String,
       default: ''
     }

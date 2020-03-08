@@ -10,10 +10,22 @@
       <v-spacer />
       <slot name="infoPanel" />
     </v-toolbar>
-    <v-card-text :class="$vuetify.breakpoint.xs ? 'DataView-CardTextForXS' : 'DataView-CardText'">
+    <v-card-text
+      :class="
+        $vuetify.breakpoint.xs ? 'DataView-CardTextForXS' : 'DataView-CardText'
+      "
+    >
       <slot />
     </v-card-text>
-    <v-footer class="DataView-Footer"> {{ date }} 更新 </v-footer>
+    <v-footer
+      v-if="sourceFrom === '' || sourceFrom === undefined"
+      class="DataView-Footer"
+    >
+      {{ date }} 更新
+    </v-footer>
+    <v-footer v-else class="DataView-Footer">
+      {{ date }} 更新 <v-spacer /> 出典: {{ sourceFrom }}
+    </v-footer>
   </v-card>
 </template>
 
@@ -24,7 +36,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 export default class DataView extends Vue {
   @Prop() private title!: string
   @Prop() private date!: string
-  @Prop() private info!: any // FIXME expect info as {lText:string, sText:string unit:string}
+  @Prop() private info!: any
+  @Prop() private sourceFrom!: string // FIXME expect info as {lText:string, sText:string unit:string}
 }
 </script>
 
