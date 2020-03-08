@@ -16,7 +16,7 @@
         <time-bar-chart
           title="陽性患者数"
           :chart-data="patientsGraph"
-          :date="Data.patients.date"
+          :date="fromdatatodate(Data.patients.date)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -27,7 +27,7 @@
           :title="'陽性患者の属性'"
           :chart-data="patientsTable"
           :chart-option="{}"
-          :date="Data.patients.date"
+          :date="fromdatatodate(Data.patients.date)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
@@ -37,7 +37,7 @@
         <time-bar-chart
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
-          :date="Data.contacts.date"
+          :date="fromdatatodate(Data.contacts.date)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
           :unit="'件'"
@@ -47,7 +47,7 @@
         <time-bar-chart
           title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
-          :date="Data.querents.date"
+          :date="fromdatatodate(Data.querents.date)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
           :unit="'件'"
@@ -160,6 +160,19 @@ export default {
   head() {
     return {
       title: '道内の最新感染動向'
+    }
+  },
+  methods: {
+    fromdatatodate(data){
+      const dateint = Date.parse(data)
+      const date = new Date(dateint)
+      const month = ("0"+(date.getMonth() + 1)).slice(-2)
+      const day =  ("0"+date.getDate()).slice(-2)
+      const hour =  ("0"+date.getHours()).slice(-2)
+      const min =  ("0"+date.getMinutes()).slice(-2)
+      const sec =  ("0"+date.getSeconds()).slice(-2)
+      const datestr = date.getFullYear() + '/' + month + '/' + day + ' ' + hour + ':' + min + ':' + sec
+      return datestr
     }
   }
 }
