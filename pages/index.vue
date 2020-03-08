@@ -38,7 +38,7 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="新型コロナコールセンター相談件数"
+          title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
           :date="Data.contacts.date"
           :unit="'件'"
