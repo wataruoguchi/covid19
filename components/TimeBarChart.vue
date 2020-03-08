@@ -1,5 +1,5 @@
 <template>
-  <data-view :title="title" :date="date">
+  <data-view :title="title" :date="date" :source-from="sourceFrom" :source-link="sourceLink">
     <template v-slot:button>
       <data-selector v-model="dataKind" />
     </template>
@@ -43,6 +43,16 @@ export default {
       type: String,
       required: false,
       default: ''
+    },
+    sourceFrom: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    sourceLink: {
+      type: String,
+      required: false,
+      default: ''
     }
   },
   data() {
@@ -52,8 +62,8 @@ export default {
   },
   computed: {
     displayCumulativeRatio() {
-      const lastDay = this.chartData.slice(-1)[0].cummulative
-      const lastDayBefore = this.chartData.slice(-2)[0].cummulative
+      const lastDay = this.chartData.slice(-1)[0].cumulative
+      const lastDayBefore = this.chartData.slice(-2)[0].cumulative
       return this.formatDayBeforeRatio(lastDay - lastDayBefore).toLocaleString()
     },
     displayTransitionRatio() {
@@ -91,7 +101,7 @@ export default {
               data: this.chartData.map(d => {
                 return d.transition
               }),
-              backgroundColor: '#00B849',
+              backgroundColor: '#45ABFF',
               borderWidth: 0
             }
           ]
@@ -107,7 +117,7 @@ export default {
             data: this.chartData.map(d => {
               return d.cumulative
             }),
-            backgroundColor: '#00B849',
+            backgroundColor: '#45ABFF',
             borderWidth: 0
           }
         ]
