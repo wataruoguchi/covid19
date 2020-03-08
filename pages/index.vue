@@ -39,7 +39,7 @@
           :chart-data="contactsGraph"
           :date="fromdatatodate(Data.contacts.date)"
           sourceFrom="札幌市役所webサイト"
-          sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
+          sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
         />
       </v-col>
@@ -49,7 +49,7 @@
           :chart-data="querentsGraph"
           :date="fromdatatodate(Data.querents.date)"
           sourceFrom="札幌市役所webサイト"
-          sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
+          sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
         />
       </v-col>
