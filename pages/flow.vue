@@ -135,7 +135,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .Flow {
   margin-bottom: 20px;
   &-Heading {
