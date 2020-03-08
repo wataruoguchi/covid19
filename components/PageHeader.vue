@@ -7,7 +7,10 @@
       {{ title }}
     </h2>
     <div class="date">
+      <span>最終更新 </span><time>2020-03-08</time>
+<!--
       <span>最終更新 </span><time>{{ date }}</time>
+-->
     </div>
   </div>
 </template>
