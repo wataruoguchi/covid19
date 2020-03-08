@@ -153,7 +153,7 @@ module.exports = {
   // },
   manifest: {
     "name": "北海道 新型コロナウイルスまとめサイト",
-    "theme_color": "#00a040",
+    "theme_color": "#4593FF",
     "background_color": "#ffffff",
     "display": "standalone",
     "Scope": "/",
