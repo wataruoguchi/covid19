@@ -63,22 +63,21 @@ $ docker-compose up
 
 ### Deployment to Staging & Production Environments / ステージング・本番環境への反映
 
-`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト XXXXXXXX が更新されます。（環境未構築）
+`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.hokkaido.dev が更新されます。
 
-`staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト XXXXXXX が更新されます。（環境未構築）
+`staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト http://133.242.52.161:50080 が更新されます。（環境未構築）
 
-`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://admiring-davinci-e0cd70.netlify.com/ が更新されます。（仮でNetlifyを使った環境）
-https://github.com/codeforsapporo/covid19/issues/21
+`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト http://133.242.52.161:58000 が更新されます。
 
 
 
 When `master` branch is updated, the HTML files will be automatically built onto `production` branch,
-and then the production site (XXXXXXXX) will be also updated.（under construction）
+and then the production site (https://stopcovid19.hokkaido.dev) will be also updated.（under construction）
 
 When `staging` branch is updated, the HTML files will be automatically built onto `gh-pages` branch,
-and then the staging site (XXXXXXXX) will be also updated.（under construction）
+and then the staging site (http://133.242.52.161:50080) will be also updated.（under construction）
 
 When `development` branch is updated, the HTML files will be automatically built onto `dev-pages` branch,
-and then the development site (https://admiring-davinci-e0cd70.netlify.com/ ) will be also updated.
+and then the development site (http://133.242.52.161:58000) will be also updated.
 
 
