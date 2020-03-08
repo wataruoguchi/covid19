@@ -2,7 +2,7 @@
 
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 
-<img src="resources/illust_19vs39_1.jpg" width="700">
+<img src="resources/illust_19vs39_1.jpg" width="300">
 
 Illustration by [LITTLEKIT](https://twitter.com/LITTLEKIT)
 
@@ -11,7 +11,8 @@ Illustration by [LITTLEKIT](https://twitter.com/LITTLEKIT)
 
 ![Tokyo](resources/tokyo_covid19.gif)
 
-<img src="https://user-images.githubusercontent.com/4961152/76084221-bd3f7b80-5ff2-11ea-81e6-865f49ddb746.png" width="500">
+
+<img src="https://user-images.githubusercontent.com/4961152/76155868-a48bae80-6135-11ea-9fdb-7c91a925f9f5.png" width="500">
 
 [北海道版稼働イメージ(適宜更新)](https://docs.google.com/presentation/d/1IX5BiHa_Ukv7rulCf0RxOZpNoZmWXIvyRYFgXxg3zS8/edit?usp=sharing)
 
