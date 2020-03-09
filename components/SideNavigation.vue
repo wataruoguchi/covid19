@@ -278,11 +278,13 @@ export default {
   &-SponsorLinkContainer {
     display: flex;
     overflow: visible;
+    padding-top: 6px;
     white-space: normal;
-    font-size: 0.85rem;
-    font-color: #333;
+    font-size: 0.82rem;
+    color: $gray-1;
     & img {
       width: 172px;
+      margin: -6px -10px;
       &:first-of-type {
         margin-right: 10px;
       }
