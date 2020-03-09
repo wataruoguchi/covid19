@@ -68,6 +68,12 @@
             />
           </a>
         </div>
+        <div class="SideNavigation-SponsorLinkContainer">
+          Powered by:<br>
+          <a href="https://www.sakura.ad.jp/" target="_blank" rel="noopener">
+            <img src="/sakura.svg" width="172px" height="46.5px" alt="さくらインターネット">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -264,6 +270,21 @@ export default {
     display: flex;
     & img {
       width: 30px;
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
+  &-SponsorLinkContainer {
+    display: flex;
+    overflow: visible;
+    padding-top: 6px;
+    white-space: normal;
+    font-size: 0.82rem;
+    color: $gray-1;
+    & img {
+      width: 172px;
+      margin: -6px -10px;
       &:first-of-type {
         margin-right: 10px;
       }
