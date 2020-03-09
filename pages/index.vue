@@ -7,9 +7,9 @@
     />
     <whats-new
       class="mb-4"
-      date="2020年3月7日"
-      url="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijyoukyou0308yousei_0307genzai.pdf"
-      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.7現在）"
+      date="2020年3月8日"
+      url="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijyoukyou0309yousei_0308genzai.pdf"
+      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.8現在）"
     />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
@@ -20,6 +20,7 @@
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
+          :defaultDataKind="'cumulative'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
@@ -39,7 +40,7 @@
           :chart-data="contactsGraph"
           :date="fromdatatodate(Data.contacts.date)"
           sourceFrom="札幌市役所webサイト"
-          sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
+          sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
         />
       </v-col>
@@ -49,7 +50,7 @@
           :chart-data="querentsGraph"
           :date="fromdatatodate(Data.querents.date)"
           sourceFrom="札幌市役所webサイト"
-          sourceLink="https://www.city.sapporo.jp/kinkyu_202002.html"
+          sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
         />
       </v-col>
