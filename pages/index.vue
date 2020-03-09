@@ -7,9 +7,9 @@
     />
     <whats-new
       class="mb-4"
-      date="2020年3月7日"
-      url="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijyoukyou0308yousei_0307genzai.pdf"
-      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.7現在）"
+      date="2020年3月8日"
+      url="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijyoukyou0309yousei_0308genzai.pdf"
+      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.8現在）"
     />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
