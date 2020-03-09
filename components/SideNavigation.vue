@@ -276,7 +276,6 @@ export default {
     }
   }
   &-SponsorLinkContainer {
-    display: flex;
     overflow: visible;
     padding-top: 6px;
     white-space: normal;

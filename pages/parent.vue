@@ -20,7 +20,7 @@ export default {
         {
           title: '1 感染予防・健康管理',
           body:
-            '<ul><li>不特定多数の人の集まる場所等への外出を避け、基本的に自宅で過ごしてください。</li><li>手洗い、咳エチケット等により、感染予防に努めてください。 <a href="http://www.pref.hokkaido.lg.jp/hf/kth/tearai.pdf" target="_blank" rel="noopener">正しい手の洗い方</a></li><li>規則正しい生活を心がけ、日常の健康管理に十分気を付けてください。</li></ul>'
+            '<ul><li>不特定多数の人の集まる場所等への外出を避け、基本的に自宅で過ごしてください。</li><li>手洗い、咳エチケット等により、感染予防に努めてください。 <a href="http://www.pref.hokkaido.lg.jp/hf/kth/tearai.pdf" target="_blank" rel="noopener">正しい手の洗い方 [PDF] </a></li><li>規則正しい生活を心がけ、日常の健康管理に十分気を付けてください。</li></ul>'
         },
         {
           title: '2 感染症を疑う場合の対応',
