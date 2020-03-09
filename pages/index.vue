@@ -16,7 +16,7 @@
         <time-bar-chart
           title="陽性患者数"
           :chart-data="patientsGraph"
-          :date="fromdatatodate(Data.patients.date)"
+          :date="fromdatatodate(patients.date)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -28,7 +28,7 @@
           :title="'陽性患者の属性'"
           :chart-data="patientsTable"
           :chart-option="{}"
-          :date="fromdatatodate(Data.patients.date)"
+          :date="fromdatatodate(patients.date)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
@@ -38,7 +38,7 @@
         <time-bar-chart
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
-          :date="fromdatatodate(Data.contacts.date)"
+          :date="fromdatatodate(contacts.date)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
@@ -48,7 +48,7 @@
         <time-bar-chart
           title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
-          :date="fromdatatodate(Data.querents.date)"
+          :date="fromdatatodate(querents.date)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
@@ -64,7 +64,11 @@ import TimeBarChart from '@/components/TimeBarChart.vue'
 import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
-import Data from '@/data/data.json'
+import lastUpdate from '@/data/last_update.json'
+import patientsSummary from '@/data/patients_summary.json'
+import patients from '@/data/patients.json'
+import contacts from '@/data/contacts.json'
+import querents from '@/data/querents.json'
 import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
@@ -82,13 +86,13 @@ export default {
   },
   data() {
     // 感染者数グラフ
-    const patientsGraph = formatGraph(Data.patients_summary.data)
+    const patientsGraph = formatGraph(patientsSummary.data)
     // 感染者数
-    const patientsTable = formatTable(Data.patients.data)
+    const patientsTable = formatTable(patients.data)
     // 相談件数
-    const contactsGraph = formatGraph(Data.contacts.data)
+    const contactsGraph = formatGraph(contacts.data)
     // 帰国者・接触者電話相談センター相談件数
-    const querentsGraph = formatGraph(Data.querents.data)
+    const querentsGraph = formatGraph(querents.data)
 
     const sumInfoOfPatients = {
       lText: patientsGraph[
@@ -99,7 +103,10 @@ export default {
     }
 
     const data = {
-      Data,
+      patientsSummary,
+      patients,
+      querents,
+      contacts,
       patientsTable,
       patientsGraph,
       contactsGraph,
@@ -108,7 +115,7 @@ export default {
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
         title: '道内の最新感染動向',
-        date: Data.last_update
+        date: lastUpdate
       },
       option: {
         tooltips: {
