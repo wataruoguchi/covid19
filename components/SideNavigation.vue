@@ -69,9 +69,14 @@
           </a>
         </div>
         <div class="SideNavigation-SponsorLinkContainer">
-          Powered by:<br>
+          Powered by:<br />
           <a href="https://www.sakura.ad.jp/" target="_blank" rel="noopener">
-            <img src="/sakura.svg" width="172px" height="46.5px" alt="さくらインターネット">
+            <img
+              src="/sakura.svg"
+              width="172px"
+              height="46.5px"
+              alt="さくらインターネット"
+            />
           </a>
         </div>
       </div>
@@ -98,7 +103,9 @@
     "Government official website": "北海道公式ホームページ",
     "Message from Governor Suzuki": "知事からのメッセージ",
     "About us": "当サイトについて",
-    "Government official Twitter": "北海道公式Twitter"
+    "Government official Twitter": "北海道公式Twitter",
+    "Other local Government": "他自治体の対策サイト",
+    "Tokyo": "東京"
   }
 }
 </i18n>
@@ -175,6 +182,14 @@ export default {
         {
           title: this.$t('Government official Twitter'),
           link: 'https://twitter.com/PrefHokkaido',
+          divider: true
+        },
+        {
+          title: this.$t('Other local Government')
+        },
+        {
+          title: this.$t('Tokyo'),
+          link: 'https://stopcovid19.metro.tokyo.lg.jp/',
           divider: true
         }
       ]
