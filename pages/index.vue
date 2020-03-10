@@ -3,7 +3,7 @@
     <page-header
       :icon="headerItem.icon"
       :title="headerItem.title"
-      :date="fromdatatodate(headerItem.date)"
+      :date="convertToDateFromData(headerItem.date)"
     />
     <whats-new
       class="mb-4"
@@ -16,7 +16,7 @@
         <time-bar-chart
           title="現在患者数"
           :chart-data="currentPatientsGraph"
-          :date="fromdatatodate(currentPatients.last_update)"
+          :date="convertToDateFromData(currentPatients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -27,7 +27,7 @@
         <time-bar-chart
           title="陰性確認数"
           :chart-data="dischargesGraph"
-          :date="fromdatatodate(dischargesSummary.last_update)"
+          :date="convertToDateFromData(dischargesSummary.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -38,7 +38,7 @@
         <time-bar-chart
           title="陽性患者数"
           :chart-data="patientsGraph"
-          :date="fromdatatodate(patients.last_update)"
+          :date="convertToDateFromData(patients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -50,7 +50,7 @@
           :title="'陽性患者の属性'"
           :chart-data="patientsTable"
           :chart-option="{}"
-          :date="fromdatatodate(patients.last_update)"
+          :date="convertToDateFromData(patients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
@@ -60,7 +60,7 @@
         <time-bar-chart
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
-          :date="fromdatatodate(contacts.last_update)"
+          :date="convertToDateFromData(contacts.last_update)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
@@ -70,7 +70,7 @@
         <time-bar-chart
           title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
-          :date="fromdatatodate(querents.last_update)"
+          :date="convertToDateFromData(querents.last_update)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
@@ -97,7 +97,7 @@ import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import SvgCard from '@/components/SvgCard.vue'
-import fromdatatodate from '@/utils/fromdatatodate'
+import convertToDateFromData from '@/utils/convertToDateFromData'
 
 export default {
   components: {
@@ -195,7 +195,7 @@ export default {
           ]
         }
       },
-      fromdatatodate
+      convertToDateFromData
     }
     return data
   },
