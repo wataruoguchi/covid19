@@ -80,6 +80,15 @@ $ docker-compose exec app sh
 /app # exit
 ```
 
+#### Use npm / npm を使う場合
+``` bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+```
+
 ### Deployment to Staging & Production Environments / ステージング・本番環境への反映
 
 `master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.hokkaido.dev が更新されます。
