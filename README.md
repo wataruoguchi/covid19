@@ -33,10 +33,11 @@ Githubのissueメンション
 #0204covid19hkd_notify
 ```
 
-その他の詳しい情報は[How to contribute(東京版)](https://github.com/tokyo-metropolitan-gov/covid19/blob/development/.github/CONTRIBUTING.md)を御覧ください。
+詳しくは[貢献の仕方](./.github/CONTRIBUTING.md)を御覧ください。
+
 
 All contributions are welcome!
-Please check [How to contribute](https://github.com/tokyo-metropolitan-gov/covid19/wiki/How-to-contribute) for details.
+Please check [How to contribute](./.github/CONTRIBUTING.md) for details.
 
 ## License / ライセンス
 本ソフトウェアは、MITライセンスの元提供されています。 
