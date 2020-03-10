@@ -14,6 +14,17 @@
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
+          title="現在患者数"
+          :chart-data="currentPatientsGraph"
+          :date="fromdatatodate(currentPatients.date)"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+          :unit="'人'"
+          :defaultDataKind="'cumulative'"
+        />
+      </v-col>
+      <v-col cols="12" md="6" class="DataCard">
+        <time-bar-chart
           title="陽性患者数"
           :chart-data="patientsGraph"
           :date="fromdatatodate(patients.date)"
@@ -69,6 +80,7 @@ import patientsSummary from '@/data/patients_summary.json'
 import patients from '@/data/patients.json'
 import contacts from '@/data/contacts.json'
 import querents from '@/data/querents.json'
+import currentPatients from '@/data/current_patients.json'
 import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
@@ -85,6 +97,8 @@ export default {
     SvgCard
   },
   data() {
+    // 感染者数グラフ
+    const currentPatientsGraph = formatGraph(currentPatients.data)
     // 感染者数グラフ
     const patientsGraph = formatGraph(patientsSummary.data)
     // 感染者数
@@ -107,10 +121,12 @@ export default {
       patients,
       querents,
       contacts,
+      currentPatients,
       patientsTable,
       patientsGraph,
       contactsGraph,
       querentsGraph,
+      currentPatientsGraph,
       sumInfoOfPatients,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
