@@ -136,10 +136,7 @@ module.exports = {
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    theme: {},
-    defaultAssets: {
-      icons: 'fa',
-    },
+    theme: {}
   },
   googleAnalytics: {
     id: 'UA-159982743-1'

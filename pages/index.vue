@@ -145,7 +145,7 @@ export default {
       dischargesGraph,
       sumInfoOfPatients,
       headerItem: {
-        icon: 'fa-chart-line',
+        icon: 'mdi-chart-timeline-variant',
         title: '道内の最新感染動向',
         date: lastUpdate
       },

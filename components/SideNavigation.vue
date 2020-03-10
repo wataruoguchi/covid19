@@ -6,7 +6,7 @@
         :aria-label="$t('Navi Open')"
         @click="openNavi"
       >
-        fa-bars
+        mdi-menu
       </v-icon>
       <nuxt-link to="/" class="SideNavigation-HeadingLink">
         <div class="SideNavigation-Logo">
@@ -29,7 +29,7 @@
         :aria-label="$t('Navi Close')"
         @click="closeNavi"
       >
-        fd-times
+        mdi-close
       </v-icon>
       <v-list :flat="true">
         <v-container
@@ -128,7 +128,7 @@ export default {
     items() {
       return [
         {
-          icon: 'fa-chart-line',
+          icon: 'mdi-chart-timeline-variant',
           title: this.$t('The latest updates'),
           link: '/'
         },
@@ -145,12 +145,12 @@ export default {
           link: '/parent'
         },
         {
-          icon: 'fa-users',
+          icon: 'mdi-account-multiple',
           title: this.$t('for Citizens'),
           link: 'http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm'
         },
         {
-          icon: 'fa-building',
+          icon: 'mdi-domain',
           title: this.$t('for Enterprises and Employees'),
           link: '/worker',
           divider: true
