@@ -105,8 +105,7 @@
     "About us": "当サイトについて",
     "Government official Twitter": "北海道公式Twitter",
     "Other local Government": "他自治体の対策サイト",
-    "Tokyo": "東京",
-    "Kanagawa": "神奈川"
+    "Tokyo": "東京"
   }
 }
 </i18n>
@@ -190,13 +189,9 @@ export default {
         },
         {
           title: this.$t('Tokyo'),
-          link: 'https://stopcovid19.metro.tokyo.lg.jp/'
-        },
-        {
-          title: this.$t('Kanagawa'),
-          link: 'https://stopcovid19.kanagawa.work/',
+          link: 'https://stopcovid19.metro.tokyo.lg.jp/',
           divider: true
-        }
+        },
       ]
     },
     isClass() {
