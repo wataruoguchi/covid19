@@ -10,11 +10,11 @@
       </v-icon>
       <nuxt-link to="/" class="SideNavigation-HeadingLink">
         <div class="SideNavigation-Logo">
-          <img src="/logo.svg" :alt="$t('Tokyo')" />
+          <img src="/logo.svg" :alt="$t('Hokkaido')" />
         </div>
         <h1 class="SideNavigation-Heading">
           <span class="SideNavigation-HeadingTitle">
-            {{ $t('Tokyo') }}<br />
+            {{ $t('Hokkaido') }}<br />
           </span>
           {{ $t('COVID-19') }}<br class="SideNavigation-HeadingMobileBreak" />{{
             $t('Measures site')
@@ -92,7 +92,7 @@
     "Hokkaido": "北海道",
     "COVID-19": "新型コロナウイルス",
     "Measures site": "まとめサイト",
-    "Hokkaido Metropolitan Government": "東京都",
+    "Hokkaido Metropolitan Government": "北海道",
     "Hokkaido COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
     "The latest updates": "道内の最新感染動向",
     "If you have any symptoms": "感染予防と相談窓口",
