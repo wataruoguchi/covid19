@@ -16,7 +16,7 @@
         <time-bar-chart
           title="現在患者数"
           :chart-data="currentPatientsGraph"
-          :date="fromdatatodate(currentPatients.date)"
+          :date="fromdatatodate(currentPatients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -27,7 +27,7 @@
         <time-bar-chart
           title="陰性確認数"
           :chart-data="dischargesGraph"
-          :date="fromdatatodate(dischargesSummary.date)"
+          :date="fromdatatodate(dischargesSummary.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -38,7 +38,7 @@
         <time-bar-chart
           title="陽性患者数"
           :chart-data="patientsGraph"
-          :date="fromdatatodate(patients.date)"
+          :date="fromdatatodate(patients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -50,7 +50,7 @@
           :title="'陽性患者の属性'"
           :chart-data="patientsTable"
           :chart-option="{}"
-          :date="fromdatatodate(patients.date)"
+          :date="fromdatatodate(patients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
@@ -60,7 +60,7 @@
         <time-bar-chart
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
-          :date="fromdatatodate(contacts.date)"
+          :date="fromdatatodate(contacts.last_update)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
@@ -70,7 +70,7 @@
         <time-bar-chart
           title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
-          :date="fromdatatodate(querents.date)"
+          :date="fromdatatodate(querents.last_update)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
