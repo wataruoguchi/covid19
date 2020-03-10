@@ -27,7 +27,7 @@
       {{ date }} 更新 <v-spacer /> 出典: {{ sourceFrom }}
     </v-footer>
     <v-footer v-else class="DataView-Footer">
-      {{ date }} 更新 <v-spacer /> <a class="DataView-Link" target="_blank" rel="noopener" :href="sourceLink">出典: {{ sourceFrom }} <v-icon size="15">mdi-open-in-new</v-icon></a>
+      {{ date }} 更新 <v-spacer /> <a class="DataView-Link" target="_blank" rel="noopener" :href="sourceLink">出典: {{ sourceFrom }} <v-icon size="15">fa-external-link-alt</v-icon></a>
     </v-footer>
   </v-card>
 </template>
