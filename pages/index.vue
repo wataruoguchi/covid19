@@ -46,6 +46,16 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
+          title="陰性確認数"
+          :chart-data="dischargesGraph"
+          :date="fromdatatodate(dischargesSummary.date)"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+          :unit="'人'"
+        />
+      </v-col>
+      <v-col cols="12" md="6" class="DataCard">
+        <time-bar-chart
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
           :date="fromdatatodate(contacts.date)"
@@ -80,6 +90,7 @@ import patients from '@/data/patients.json'
 import contacts from '@/data/contacts.json'
 import querents from '@/data/querents.json'
 import currentPatients from '@/data/current_patients.json'
+import dischargesSummary from '@/data/discharges_summary.json'
 import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
@@ -96,12 +107,14 @@ export default {
     SvgCard
   },
   data() {
-    // 感染者数グラフ
+    // 現在患者数グラフ
     const currentPatientsGraph = formatGraph(currentPatients.data)
     // 感染者数グラフ
     const patientsGraph = formatGraph(patientsSummary.data)
     // 感染者数
     const patientsTable = formatTable(patients.data)
+    // 陰性確認数グラフ
+    const dischargesGraph = formatGraph(dischargesSummary.data)
     // 相談件数
     const contactsGraph = formatGraph(contacts.data)
     // 帰国者・接触者電話相談センター相談件数
@@ -121,11 +134,13 @@ export default {
       querents,
       contacts,
       currentPatients,
+      dischargesSummary,
       patientsTable,
       patientsGraph,
       contactsGraph,
       querentsGraph,
       currentPatientsGraph,
+      dischargesGraph,
       sumInfoOfPatients,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
