@@ -1,7 +1,7 @@
 <template>
   <a class="whatsNewOuter" :href="url" target="_blank" rel="noopener">
     <v-icon size="18" class="whatsNewOuter-Icon">
-      mdi-information
+      fa-info
     </v-icon>
     <time class="time px-2">{{ date }}</time>
     <span class="link">{{ text }}</span>
