@@ -9,6 +9,7 @@
       複製・改変が許されたオープンソースライセンスで公開されている、<a target="_blank" href="https://stopcovid19.metro.tokyo.lg.jp/">東京都公式新型コロナウイルス対策サイト</a>の<a target="_blank" href="https://github.com/tokyo-metropolitan-gov/covid19" rel="noopener">仕組み</a>を利用しています。<br />
       <br />
       北海道による公式情報と客観的な数値をわかりやすく伝えることで、北海道にお住まいの方や、北海道内に拠点を持つ企業の方、北海道を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。
+
     </TextCard>
     <TextCard title="ブラウザ環境について">
       当サイトは以下の環境でご覧いただくことを推奨いたします。<br />
@@ -80,6 +81,11 @@
     <TextCard title="お問い合わせ先">
       当サイトについてのお問い合わせは<br />
       <a target="_blank" href="https://www.facebook.com/Justdouit19/" rel="noopener">JUST道IT Facebookページ</a>までお願いします。
+    </TextCard>
+
+    <TextCard title="これ、何画像何でしょう・・・">
+      <img src="ogp.png"/>
+      Illustration by <a href="https://twitter.com/LITTLEKIT">LITTLEKIT</a> under <a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>
     </TextCard>
   </div>
 </template>
