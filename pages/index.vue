@@ -7,9 +7,9 @@
     />
     <whats-new
       class="mb-4"
-      date="2020年3月8日"
+      date="2020年3月9日"
       url="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
-      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.8現在）"
+      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.9現在）"
     />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
@@ -20,6 +20,18 @@
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
+          :defaultDataKind="'cumulative'"
+        />
+      </v-col>
+      <v-col cols="12" md="6" class="DataCard">
+        <time-bar-chart
+          title="陰性確認数"
+          :chart-data="dischargesGraph"
+          :date="fromdatatodate(dischargesSummary.date)"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+          :unit="'人'"
+          :defaultDataKind="'cumulative'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
@@ -42,16 +54,6 @@
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
-        />
-      </v-col>
-      <v-col cols="12" md="6" class="DataCard">
-        <time-bar-chart
-          title="陰性確認数"
-          :chart-data="dischargesGraph"
-          :date="fromdatatodate(dischargesSummary.date)"
-          sourceFrom="北海道庁webサイト"
-          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
-          :unit="'人'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
