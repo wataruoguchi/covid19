@@ -1,16 +1,21 @@
 <template>
-  <data-view :title="title" :date="date" :source-from="sourceFrom" :source-link="sourceLink">
+  <data-view
+    :title="title"
+    :date="date"
+    :source-from="sourceFrom"
+    :source-link="sourceLink"
+  >
     <template v-slot:button>
       <data-selector v-model="dataKind" />
     </template>
     <bar :chart-data="displayData" :options="displayOption" :height="240" />
-    <v-footer class="TimeBarChart-Footer" v-if="supplement !== ''">
+    <v-footer v-if="supplement !== ''" class="TimeBarChart-Footer">
       <ul class="supplementTexts">
         <li class="supplementText">
           補足:
         </li>
         <li class="supplementText2">
-          {{supplement}}
+          {{ supplement }}
         </li>
       </ul>
     </v-footer>
@@ -96,7 +101,6 @@ export default {
       required: false,
       default: ''
     }
-
   },
   data() {
     return {
