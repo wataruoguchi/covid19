@@ -63,7 +63,7 @@
                 <a class="Link" href="http://www.pref.hokkaido.lg.jp/hf/kth/kak/singatakoronahaien.htm#相談窓口" target="_blank" rel="noopener">
                   各保健所の電話番号は地域保健課ページへ
                   <v-icon size="16">
-                    fa-external-link-alt
+                    mdi-open-in-new
                   </v-icon>
                 </a>
               </dd>
@@ -115,7 +115,7 @@
       >
         詳細を見る(道庁保健福祉部地域保健課)
         <v-icon class="Flow-Card-Button-ExternalLinkIcon" size="20">
-          fa-external-link-alt
+          mdi-open-in-new
         </v-icon>
       </a>
     </div>
