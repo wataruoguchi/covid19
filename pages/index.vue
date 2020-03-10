@@ -97,6 +97,7 @@ import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import SvgCard from '@/components/SvgCard.vue'
+import fromdatatodate from '@/utils/fromdatatodate'
 
 export default {
   components: {
@@ -193,26 +194,14 @@ export default {
             }
           ]
         }
-      }
+      },
+      fromdatatodate
     }
     return data
   },
   head() {
     return {
       title: '道内の最新感染動向'
-    }
-  },
-  methods: {
-    fromdatatodate(data){
-      const dateint = Date.parse(data)
-      const date = new Date(dateint)
-      const month = ("0"+(date.getMonth() + 1)).slice(-2)
-      const day =  ("0"+date.getDate()).slice(-2)
-      const hour =  ("0"+date.getHours()).slice(-2)
-      const min =  ("0"+date.getMinutes()).slice(-2)
-      const sec =  ("0"+date.getSeconds()).slice(-2)
-      const datestr = date.getFullYear() + '/' + month + '/' + day + ' ' + hour + ':' + min + ':' + sec
-      return datestr
     }
   }
 }
