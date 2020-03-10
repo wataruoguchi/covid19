@@ -83,8 +83,8 @@
       <a target="_blank" href="https://www.facebook.com/Justdouit19/" rel="noopener">JUST道IT Facebookページ</a>までお願いします。
     </TextCard>
 
-    <TextCard title="これ、何画像何でしょう・・・">
-      <img src="ogp.png"/>
+    <TextCard title="">
+      <img src="/ogp.png"/>
       Illustration by <a href="https://twitter.com/LITTLEKIT">LITTLEKIT</a> under <a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>
     </TextCard>
   </div>
