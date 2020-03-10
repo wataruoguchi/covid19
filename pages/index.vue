@@ -106,7 +106,7 @@ export default {
       querentsGraph,
       sumInfoOfPatients,
       headerItem: {
-        icon: 'mdi-chart-timeline-variant',
+        icon: 'fa-chart-line',
         title: '道内の最新感染動向',
         date: Data.last_update
       },

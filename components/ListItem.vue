@@ -41,7 +41,7 @@
       class="ListItem-ExternalLinkIcon"
       size="12"
     >
-      mdi-open-in-new
+      fa-external-link-alt
     </v-icon>
   </v-list-item>
 </template>
@@ -87,7 +87,7 @@ export default class ListItem extends Vue {
     icon?: string
   ): 'none' | 'material' | 'covid' | 'parent' | 'others' {
     if (!icon) return 'none'
-    if (icon.startsWith('mdi')) {
+    if (icon.startsWith('fa')) {
       return 'material'
     } else if (icon === 'covid') {
       return 'covid'
