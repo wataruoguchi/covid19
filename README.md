@@ -103,7 +103,6 @@ and then the production site (https://stopcovid19.hokkaido.dev) will be also upd
 When `development` branch is updated, the HTML files will be automatically built onto `dev-pages` branch,
 and then the development site (http://133.242.52.161:58000) will be also updated.
 
-
 ### 東京都版との整合性についての方針
 
 forkした後の更新が激しいので（東京都版、北海道版共に）、機械的なmergeはせず必要なものがあれば都度cherry-pickする方針とします。
