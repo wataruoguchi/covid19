@@ -53,7 +53,12 @@
             target="_blank"
             rel="noopener"
           >
-            <img src="/twitter.png" width="90px" height="90px" alt="Twitter" />
+            <img
+              src="/twitter.png"
+              width="90px"
+              height="90px"
+              alt="Twitter"
+            />
           </a>
           <a
             href="https://www.facebook.com/Justdouit19/"
@@ -65,6 +70,18 @@
               width="90px"
               height="90px"
               alt="Facebook"
+            />
+          </a>
+          <a
+            href="https://github.com/codeforsapporo/covid19"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/github.png"
+              width="90px"
+              height="90px"
+              alt="GitHub"
             />
           </a>
         </div>
@@ -87,9 +104,6 @@
               height="46.5px"
               alt="さくらインターネット"
             />
-          </a>
-          <a href="https://github.com/codeforsapporo/covid19">
-            <img src="/github.png" />
           </a>
         </div>
       </div>
