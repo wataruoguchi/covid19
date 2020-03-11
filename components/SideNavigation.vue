@@ -104,9 +104,7 @@
     "Message from Governor Suzuki": "知事からのメッセージ",
     "About us": "当サイトについて",
     "Government official Twitter": "北海道公式Twitter",
-    "Other local Government": "他自治体の対策サイト",
-    "Tokyo": "東京",
-    "Kanagawa": "神奈川"
+    "Tokyo-to Measures site": "東京都 新型コロナウイルス感染症対策サイト"
   }
 }
 </i18n>
@@ -186,17 +184,10 @@ export default {
           divider: true
         },
         {
-          title: this.$t('Other local Government')
-        },
-        {
-          title: this.$t('Tokyo'),
-          link: 'https://stopcovid19.metro.tokyo.lg.jp/'
-        },
-        {
-          title: this.$t('Kanagawa'),
-          link: 'https://stopcovid19.kanagawa.work/',
+          title: this.$t('Tokyo-to Measures site'),
+          link: 'https://stopcovid19.metro.tokyo.lg.jp/',
           divider: true
-        }
+        },
       ]
     },
     isClass() {
