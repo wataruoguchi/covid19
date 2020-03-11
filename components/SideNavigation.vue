@@ -88,7 +88,7 @@
               alt="さくらインターネット"
             />
           </a>
-          <a href="https://github.com/tokyo-metropolitan-gov/covid19">
+          <a href="https://github.com/codeforsapporo/covid19">
             <img src="/github.png" />
           </a>
         </div>
