@@ -62,8 +62,8 @@
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
           :date="convertToDateFromData(contacts.last_update)"
-          sourceFrom="札幌市役所webサイト"
-          sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
+          sourceFrom="DATA-SMART CITY SAPPORO"
+          sourceLink="https://ckan.pf-sapporo.jp/dataset/covid_19_soudan"
           :unit="'件'"
         />
       </v-col>
@@ -72,8 +72,8 @@
           title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
           :date="convertToDateFromData(querents.last_update)"
-          sourceFrom="札幌市役所webサイト"
-          sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
+          sourceFrom="DATA-SMART CITY SAPPORO"
+          sourceLink="https://ckan.pf-sapporo.jp/dataset/covid_19_soudan"
           :unit="'件'"
         />
       </v-col>
