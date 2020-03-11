@@ -3,20 +3,43 @@
     <page-header
       :icon="headerItem.icon"
       :title="headerItem.title"
-      :date="fromdatatodate(headerItem.date)"
+      :date="convertToDateFromData(headerItem.date)"
     />
     <whats-new
       class="mb-4"
-      date="2020年3月8日"
-      url="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijyoukyou0309yousei_0308genzai.pdf"
-      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.8現在）[PDF]"
+      date="2020年3月9日"
+      url="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.9現在）"
     />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
+          title="現在患者数"
+          :chart-data="currentPatientsGraph"
+          :date="convertToDateFromData(currentPatients.last_update)"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+          :unit="'人'"
+          :defaultDataKind="'cumulative'"
+        />
+      </v-col>
+      <v-col cols="12" md="6" class="DataCard">
+        <time-bar-chart
+          title="治療終了者数"
+          :chart-data="dischargesGraph"
+          :date="convertToDateFromData(dischargesSummary.last_update)"
+          sourceFrom="北海道庁webサイト"
+          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+          :unit="'人'"
+          :defaultDataKind="'cumulative'"
+          :supplement="'治療終了者数とは道発表の「陰性確認済累計」と同じものです。「陰性確認済累計」とは、陽性の患者が軽快してから48時間後の1回目のPCR検査で陰性が確認され、それから12時間後の2回目のPCR検査でも陰性が確認された方の累計のことです。（3/9 鈴木知事のツイートから引用）'"
+        />
+      </v-col>
+      <v-col cols="12" md="6" class="DataCard">
+        <time-bar-chart
           title="陽性患者数"
           :chart-data="patientsGraph"
-          :date="fromdatatodate(Data.patients.date)"
+          :date="convertToDateFromData(patients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -28,7 +51,7 @@
           :title="'陽性患者の属性'"
           :chart-data="patientsTable"
           :chart-option="{}"
-          :date="fromdatatodate(Data.patients.date)"
+          :date="convertToDateFromData(patients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
@@ -38,9 +61,9 @@
         <time-bar-chart
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
-          :date="fromdatatodate(Data.contacts.date)"
-          sourceFrom="札幌市役所webサイト"
-          sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
+          :date="convertToDateFromData(contacts.last_update)"
+          sourceFrom="DATA-SMART CITY SAPPORO"
+          sourceLink="https://ckan.pf-sapporo.jp/dataset/covid_19_soudan"
           :unit="'件'"
         />
       </v-col>
@@ -48,9 +71,9 @@
         <time-bar-chart
           title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
-          :date="fromdatatodate(Data.querents.date)"
-          sourceFrom="札幌市役所webサイト"
-          sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
+          :date="convertToDateFromData(querents.last_update)"
+          sourceFrom="DATA-SMART CITY SAPPORO"
+          sourceLink="https://ckan.pf-sapporo.jp/dataset/covid_19_soudan"
           :unit="'件'"
         />
       </v-col>
@@ -64,11 +87,18 @@ import TimeBarChart from '@/components/TimeBarChart.vue'
 import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
-import Data from '@/data/data.json'
+import lastUpdate from '@/data/last_update.json'
+import patientsSummary from '@/data/patients_summary.json'
+import patients from '@/data/patients.json'
+import contacts from '@/data/contacts.json'
+import querents from '@/data/querents.json'
+import currentPatients from '@/data/current_patients.json'
+import dischargesSummary from '@/data/discharges_summary.json'
 import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import SvgCard from '@/components/SvgCard.vue'
+import convertToDateFromData from '@/utils/convertToDateFromData'
 
 export default {
   components: {
@@ -81,14 +111,18 @@ export default {
     SvgCard
   },
   data() {
+    // 現在患者数グラフ
+    const currentPatientsGraph = formatGraph(currentPatients.data)
     // 感染者数グラフ
-    const patientsGraph = formatGraph(Data.patients_summary.data)
+    const patientsGraph = formatGraph(patientsSummary.data)
     // 感染者数
-    const patientsTable = formatTable(Data.patients.data)
+    const patientsTable = formatTable(patients.data)
+    // 陰性確認数グラフ
+    const dischargesGraph = formatGraph(dischargesSummary.data)
     // 相談件数
-    const contactsGraph = formatGraph(Data.contacts.data)
+    const contactsGraph = formatGraph(contacts.data)
     // 帰国者・接触者電話相談センター相談件数
-    const querentsGraph = formatGraph(Data.querents.data)
+    const querentsGraph = formatGraph(querents.data)
 
     const sumInfoOfPatients = {
       lText: patientsGraph[
@@ -99,16 +133,23 @@ export default {
     }
 
     const data = {
-      Data,
+      patientsSummary,
+      patients,
+      querents,
+      contacts,
+      currentPatients,
+      dischargesSummary,
       patientsTable,
       patientsGraph,
       contactsGraph,
       querentsGraph,
+      currentPatientsGraph,
+      dischargesGraph,
       sumInfoOfPatients,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
         title: '道内の最新感染動向',
-        date: Data.last_update
+        date: lastUpdate
       },
       option: {
         tooltips: {
@@ -154,26 +195,14 @@ export default {
             }
           ]
         }
-      }
+      },
+      convertToDateFromData
     }
     return data
   },
   head() {
     return {
       title: '道内の最新感染動向'
-    }
-  },
-  methods: {
-    fromdatatodate(data){
-      const dateint = Date.parse(data)
-      const date = new Date(dateint)
-      const month = ("0"+(date.getMonth() + 1)).slice(-2)
-      const day =  ("0"+date.getDate()).slice(-2)
-      const hour =  ("0"+date.getHours()).slice(-2)
-      const min =  ("0"+date.getMinutes()).slice(-2)
-      const sec =  ("0"+date.getSeconds()).slice(-2)
-      const datestr = date.getFullYear() + '/' + month + '/' + day + ' ' + hour + ':' + min + ':' + sec
-      return datestr
     }
   }
 }

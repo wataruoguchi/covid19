@@ -10,11 +10,11 @@
       </v-icon>
       <nuxt-link to="/" class="SideNavigation-HeadingLink">
         <div class="SideNavigation-Logo">
-          <img src="/logo.svg" :alt="$t('Tokyo')" />
+          <img src="/logo.svg" :alt="$t('Hokkaido')" />
         </div>
         <h1 class="SideNavigation-Heading">
           <span class="SideNavigation-HeadingTitle">
-            {{ $t('Tokyo') }}<br />
+            {{ $t('Hokkaido') }}<br />
           </span>
           {{ $t('COVID-19') }}<br class="SideNavigation-HeadingMobileBreak" />{{
             $t('Measures site')
@@ -35,7 +35,7 @@
         <v-container
           v-for="(item, i) in items"
           :key="i"
-          :class="isClass(item)"
+          :class="(isClass(item), item.class)"
           class="SideNavigation-ListItemContainer"
           @click="closeNavi"
         >
@@ -53,7 +53,12 @@
             target="_blank"
             rel="noopener"
           >
-            <img src="/twitter.png" width="90px" height="90px" alt="Twitter" />
+            <img
+              src="/twitter.png"
+              width="90px"
+              height="90px"
+              alt="Twitter"
+            />
           </a>
           <a
             href="https://www.facebook.com/Justdouit19/"
@@ -67,11 +72,38 @@
               alt="Facebook"
             />
           </a>
+          <a
+            href="https://github.com/codeforsapporo/covid19"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/github.png"
+              width="90px"
+              height="90px"
+              alt="GitHub"
+            />
+          </a>
         </div>
         <div class="SideNavigation-SponsorLinkContainer">
-          Powered by:<br>
+          Operations by:<br />
+          <span class="image-title">JUST道IT</span>
+          <img
+            src="/justdouit.png"
+            width="172px"
+            height="42px"
+            alt="JUST道IT"
+          /><br />
+          Powered by:<br />
           <a href="https://www.sakura.ad.jp/" target="_blank" rel="noopener">
-            <img src="/sakura.svg" width="172px" height="46.5px" alt="さくらインターネット">
+            <span class="image-title">さくらインターネット</span>
+            <img
+              class="sakura-internet"
+              src="/sakura.svg"
+              width="172px"
+              height="46.5px"
+              alt="さくらインターネット"
+            />
           </a>
         </div>
       </div>
@@ -84,11 +116,11 @@
   "ja": {
     "Navi Open": "サイドメニュー項目を開く",
     "Navi Close": "サイドメニュー項目を閉じる",
-    "Tokyo": "北海道",
+    "Hokkaido": "北海道",
     "COVID-19": "新型コロナウイルス",
     "Measures site": "まとめサイト",
-    "Tokyo Metropolitan Government": "東京都",
-    "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
+    "Hokkaido Metropolitan Government": "北海道",
+    "Hokkaido COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
     "The latest updates": "道内の最新感染動向",
     "If you have any symptoms": "感染予防と相談窓口",
     "for Families with children": "お子様をお持ちの皆様へ",
@@ -98,7 +130,8 @@
     "Government official website": "北海道公式ホームページ",
     "Message from Governor Suzuki": "知事からのメッセージ",
     "About us": "当サイトについて",
-    "Government official Twitter": "北海道公式Twitter"
+    "Government official Twitter": "北海道公式Twitter",
+    "Tokyo-to Measures site": "東京都 新型コロナウイルス感染症対策サイト"
   }
 }
 </i18n>
@@ -176,7 +209,12 @@ export default {
           title: this.$t('Government official Twitter'),
           link: 'https://twitter.com/PrefHokkaido',
           divider: true
-        }
+        },
+        {
+          title: this.$t('Tokyo-to Measures site'),
+          link: 'https://stopcovid19.metro.tokyo.lg.jp/',
+          divider: true
+        },
       ]
     },
     isClass() {
@@ -283,10 +321,15 @@ export default {
     color: $gray-1;
     & img {
       width: 172px;
+    }
+    & img.sakura-internet {
       margin: -6px -10px;
-      &:first-of-type {
-        margin-right: 10px;
-      }
+    }
+    & .image-title {
+      display: inline-block;
+      width: 0;
+      height: 1.5rem;
+      overflow: hidden;
     }
   }
   &-Copyright {

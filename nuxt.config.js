@@ -15,7 +15,12 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: '当サイトは、道内の新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために作成されました。開発は、ICTエンジニアやデザイナーなどによって結成された「JUST道IT」が行っています。複製・改変が許されたオープンソースライセンスで公開されている、東京都公式新型コロナウイルス対策サイト（https://stopcovid19.metro.tokyo.lg.jp/）の仕組みを利用しています。'
+        content: '北海道内の新型コロナウイルス感染症 (COVID-19) に関する、感染者数、患者数などの最新統計情報（随時更新）'
+      },
+      {
+        hid: 'keyword',
+        name: 'keyword',
+        content: 'JUST道IT, 北海道, 札幌市, 新型コロナウイルス, COVID-19, 感染者数, 患者数'
       },
       {
         hid: 'og:site_name',
@@ -76,7 +81,10 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['~assets/global.scss'],
+  css: [
+    '~assets/global.scss',
+    '@mdi/font/css/materialdesignicons.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -136,7 +144,8 @@ module.exports = {
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    theme: {}
+    theme: {},
+    defaultAssets: false
   },
   googleAnalytics: {
     id: 'UA-159982743-1'
@@ -153,7 +162,7 @@ module.exports = {
   // },
   manifest: {
     "name": "北海道 新型コロナウイルスまとめサイト",
-    "theme_color": "#4593FF",
+    "theme_color": "#1268d8",
     "background_color": "#ffffff",
     "display": "standalone",
     "Scope": "/",

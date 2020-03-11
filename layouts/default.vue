@@ -2,7 +2,7 @@
   <v-app class="app">
     <div v-if="loading" class="loader">
       <img src="/logo.svg" alt="北海道" />
-      <scale-loader color="#4593FF" />
+      <scale-loader color="#1268d8" />
     </div>
     <div v-else class="appContainer">
       <div class="naviContainer">
