@@ -1,24 +1,9 @@
 <template>
-  <data-view
-    :title="title"
-    :date="date"
-    :source-from="sourceFrom"
-    :source-link="sourceLink"
-  >
+  <data-view :title="title" :date="date" :source-from="sourceFrom" :source-link="sourceLink">
     <template v-slot:button>
       <data-selector v-model="dataKind" />
     </template>
     <bar :chart-data="displayData" :options="displayOption" :height="240" />
-    <v-footer v-if="supplement !== ''" class="TimeBarChart-Footer">
-      <ul class="supplementTexts">
-        <li class="supplementText">
-          補足:
-        </li>
-        <li class="supplementText2">
-          {{ supplement }}
-        </li>
-      </ul>
-    </v-footer>
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
         :l-text="displayInfo.lText"
@@ -29,29 +14,7 @@
   </data-view>
 </template>
 
-<style lang="scss">
-.TimeBarChart-Footer {
-  background-color: $white !important;
-  text-align: left;
-  margin: 0;
-  flex-direction: row-reverse;
-  @include font-size(12);
-  color: $gray-3 !important;
-  text-decoration: none;
-}
-.supplementTexts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-}
-.supplementText {
-  width: 3em;
-}
-.supplementText2 {
-  width: 100%;
-}
-</style>
+<style></style>
 
 <script>
 import DataView from '@/components/DataView.vue'
@@ -95,11 +58,6 @@ export default {
       type: String,
       required: false,
       default: 'transition'
-    },
-    supplement: {
-      type: String,
-      required: false,
-      default: ''
     }
   },
   data() {
