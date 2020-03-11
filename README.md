@@ -33,11 +33,10 @@ Githubのissueメンション
 #0204covid19hkd_notify
 ```
 
-詳しくは[貢献の仕方](./.github/CONTRIBUTING.md)を御覧ください。
-
+その他の詳しい情報は[How to contribute(東京版)](https://github.com/tokyo-metropolitan-gov/covid19/blob/development/.github/CONTRIBUTING.md)を御覧ください。
 
 All contributions are welcome!
-Please check [How to contribute](./.github/CONTRIBUTING.md) for details.
+Please check [How to contribute](https://github.com/tokyo-metropolitan-gov/covid19/wiki/How-to-contribute) for details.
 
 ## License / ライセンス
 本ソフトウェアは、MITライセンスの元提供されています。 
@@ -94,17 +93,19 @@ $ npm run dev
 
 `master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.hokkaido.dev が更新されます。
 
+`staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト http://133.242.52.161:50080 が更新されます。（環境未構築）
+
 `development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト http://133.242.52.161:58000 が更新されます。
+
 
 
 When `master` branch is updated, the HTML files will be automatically built onto `production` branch,
 and then the production site (https://stopcovid19.hokkaido.dev) will be also updated.（under construction）
 
+When `staging` branch is updated, the HTML files will be automatically built onto `gh-pages` branch,
+and then the staging site (http://133.242.52.161:50080) will be also updated.（under construction）
+
 When `development` branch is updated, the HTML files will be automatically built onto `dev-pages` branch,
 and then the development site (http://133.242.52.161:58000) will be also updated.
 
-
-### 東京都版との整合性についての方針
-
-forkした後の更新が激しいので（東京都版、北海道版共に）、機械的なmergeはせず必要なものがあれば都度cherry-pickする方針とします。
 
