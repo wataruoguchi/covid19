@@ -3,7 +3,7 @@
     <page-header
       :icon="headerItem.icon"
       :title="headerItem.title"
-      :date="convertToDateFromData(headerItem.date)"
+      :date="fromdatatodate(headerItem.date)"
     />
     <whats-new
       class="mb-4"
@@ -16,7 +16,7 @@
         <time-bar-chart
           title="現在患者数"
           :chart-data="currentPatientsGraph"
-          :date="convertToDateFromData(currentPatients.last_update)"
+          :date="fromdatatodate(currentPatients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -25,21 +25,20 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="治療終了者数"
+          title="陰性確認数"
           :chart-data="dischargesGraph"
-          :date="convertToDateFromData(dischargesSummary.last_update)"
+          :date="fromdatatodate(dischargesSummary.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
           :defaultDataKind="'cumulative'"
-          :supplement="'治療終了者数とは道発表の「陰性確認済累計」と同じものです。「陰性確認済累計」とは、陽性の患者が軽快してから48時間後の1回目のPCR検査で陰性が確認され、それから12時間後の2回目のPCR検査でも陰性が確認された方の累計のことです。（3/9 鈴木知事のツイートから引用）'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="陽性患者数"
           :chart-data="patientsGraph"
-          :date="convertToDateFromData(patients.last_update)"
+          :date="fromdatatodate(patients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
           :unit="'人'"
@@ -51,7 +50,7 @@
           :title="'陽性患者の属性'"
           :chart-data="patientsTable"
           :chart-option="{}"
-          :date="convertToDateFromData(patients.last_update)"
+          :date="fromdatatodate(patients.last_update)"
           sourceFrom="北海道庁webサイト"
           sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
           :info="sumInfoOfPatients"
@@ -61,7 +60,7 @@
         <time-bar-chart
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
-          :date="convertToDateFromData(contacts.last_update)"
+          :date="fromdatatodate(contacts.last_update)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
@@ -71,7 +70,7 @@
         <time-bar-chart
           title="帰国者・接触者電話相談センター相談件数(札幌市保健所値)"
           :chart-data="querentsGraph"
-          :date="convertToDateFromData(querents.last_update)"
+          :date="fromdatatodate(querents.last_update)"
           sourceFrom="札幌市役所webサイト"
           sourceLink="https://www.city.sapporo.jp/hokenjo/f1kansen/2019n-cov_kaigi.html"
           :unit="'件'"
@@ -98,7 +97,6 @@ import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import SvgCard from '@/components/SvgCard.vue'
-import convertToDateFromData from '@/utils/convertToDateFromData'
 
 export default {
   components: {
@@ -195,14 +193,26 @@ export default {
             }
           ]
         }
-      },
-      convertToDateFromData
+      }
     }
     return data
   },
   head() {
     return {
       title: '道内の最新感染動向'
+    }
+  },
+  methods: {
+    fromdatatodate(data){
+      const dateint = Date.parse(data)
+      const date = new Date(dateint)
+      const month = ("0"+(date.getMonth() + 1)).slice(-2)
+      const day =  ("0"+date.getDate()).slice(-2)
+      const hour =  ("0"+date.getHours()).slice(-2)
+      const min =  ("0"+date.getMinutes()).slice(-2)
+      const sec =  ("0"+date.getSeconds()).slice(-2)
+      const datestr = date.getFullYear() + '/' + month + '/' + day + ' ' + hour + ':' + min + ':' + sec
+      return datestr
     }
   }
 }
