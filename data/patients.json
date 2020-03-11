@@ -1,11 +1,11 @@
 {
     "data": [
         {
-            "no": "1",
-            "date": "2020-01-28T08:00:00.000Z",
-            "place": "中国武漢市",
+            "no": 1,
+            "date": "2020-01-28T00:00:00+09:00",
             "age": "40代",
-            "sex": "女性",
+            "sex": "女",
+            "place": "中国（武漢市）",
             "other_patient": "なし",
             "contact_person": "濃厚接触者を特定し 健康観察終了"
         },
@@ -989,15 +989,133 @@
             "sex": "男性",
             "other_patient": "No.79 No.78No.79",
             "contact_person": "札幌市公表中 札幌市公表中"
+
         },
         {
-            "no": "111",
-            "date": "2020-03-10T10:00:00.000Z",
+            "no": 98,
+            "date": "2020-03-07T00:00:00+09:00",
+            "age": "60代 ",
+            "sex": "男",
             "place": "札幌市",
-            "age": "50代",
-            "sex": "男性",
-            "other_patient": "No.78No.79",
+            "other_patient": "No.79 No.109",
             "contact_person": "札幌市公表中"
+        },
+        {
+            "no": 99,
+            "date": "2020-03-08T00:00:00+09:00",
+            "age": "60代 ",
+            "sex": "男",
+            "place": "空知総合振興局管内（岩見沢市） ",
+            "other_patient": "No.100 ",
+            "contact_person": "現在調査中 "
+        },
+        {
+            "no": 100,
+            "date": "2020-03-08T00:00:00+09:00",
+            "age": "70代 ",
+            "sex": "女",
+            "place": "空知総合振興局管内（岩見沢市） ",
+            "other_patient": "No.99",
+            "contact_person": "現在調査中 "
+        },
+        {
+            "no": 101,
+            "date": "2020-03-08T00:00:00+09:00",
+            "age": "70代 ",
+            "sex": "男",
+            "place": "上川総合振興局管内（旭川市） ",
+            "other_patient": "旭川市公表中 ",
+            "contact_person": "旭川市公表中 "
+        },
+        {
+            "no": 102,
+            "date": "2020-03-09T00:00:00+09:00",
+            "age": "50代 ",
+            "sex": "男",
+            "place": "札幌市 ",
+            "other_patient": "札幌市公表中 ",
+            "contact_person": "札幌市公表中 "
+        },
+        {
+            "no": 103,
+            "date": "2020-03-09T00:00:00+09:00",
+            "age": "70代 ",
+            "sex": "女",
+            "place": "札幌市 ",
+            "other_patient": "No.95",
+            "contact_person": "札幌市公表中 "
+        },
+        {
+            "no": 104,
+            "date": "2020-03-09T00:00:00+09:00",
+            "age": "50代 ",
+            "sex": "男",
+            "place": "札幌市 ",
+            "other_patient": "No.95",
+            "contact_person": "札幌市公表中 "
+        },
+        {
+            "no": 105,
+            "date": "2020-03-09T00:00:00+09:00",
+            "age": "50代 ",
+            "sex": "女",
+            "place": "札幌市 ",
+            "other_patient": "No.95",
+            "contact_person": "札幌市公表中 "
+        },
+        {
+            "no": 106,
+            "date": "2020-03-09T00:00:00+09:00",
+            "age": "50代 ",
+            "sex": "男",
+            "place": "札幌市 ",
+            "other_patient": "No.69",
+            "contact_person": "札幌市公表中 "
+        },
+        {
+            "no": 107,
+            "date": "2020-03-09T00:00:00+09:00",
+            "age": "70代 ",
+            "sex": "男",
+            "place": "石狩振興局管内 ",
+            "other_patient": "No.88 No.108",
+            "contact_person": "現在調査中 "
+        },
+        {
+            "no": 108,
+            "date": "2020-03-09T00:00:00+09:00",
+            "age": "60代 ",
+            "sex": "女",
+            "place": "石狩振興局管内 ",
+            "other_patient": "No.88 No.107",
+            "contact_person": "現在調査中 "
+        },
+        {
+            "no": 109,
+            "date": "2020-03-10T00:00:00+09:00",
+            "age": "60代 ",
+            "sex": "女",
+            "place": "札幌市 ",
+            "other_patient": "No.98",
+            "contact_person": "現在調査中 "
+        },
+        {
+            "no": 110,
+            "date": "2020-03-10T00:00:00+09:00",
+            "age": "60代 ",
+            "sex": "男",
+            "place": "札幌市 ",
+            "other_patient": "No.79",
+            "contact_person": "現在調査中 "
+        },
+        {
+            "no": 111,
+            "date": "2020-03-10T00:00:00+09:00",
+            "age": "50代 ",
+            "sex": "男",
+            "place": "札幌市 ",
+            "other_patient": "No.78 No.79",
+            "contact_person": "現在調査中 "
         }
     ],
     "last_update": "2020-03-11T00:50:22.617+09:00"
