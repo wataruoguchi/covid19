@@ -88,7 +88,7 @@
         <div class="SideNavigation-SponsorLinkContainer">
           Data by:<br />
           <a href="/about/#data" target="_blank" rel="noopener">
-            <span class="no-image-title">北海道</span>
+            <span class="no-image-title">北海道</span><br />
             <span class="no-image-title">札幌市</span>
           </a><br />
           <a class="license" href="//creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener">
@@ -367,10 +367,8 @@ export default {
       display: inline-block;
       line-height: 1.8rem;
       color: #444;
-      font-size: 1.8rem;
-      font-weight: 700;
-      transform-origin: 0 0;
-      transform: scale(0.95, 1.16);
+      font-size: 1.5rem;
+      font-weight: 400;
     }
     & .cc-by-logo {
       width: auto;
@@ -379,7 +377,7 @@ export default {
     }
     & a.license {
       display: inline-block;
-      margin: -.3rem 0 .8rem 0;
+      margin: -.7rem 0 .2rem 0;
     }
   }
   &-Copyright {
