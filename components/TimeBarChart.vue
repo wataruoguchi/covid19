@@ -53,7 +53,6 @@
 }
 </style>
 
-
 <script>
 import DataView from '@/components/DataView.vue'
 import DataSelector from '@/components/DataSelector.vue'
