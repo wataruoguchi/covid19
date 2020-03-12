@@ -17,8 +17,8 @@
           title="現在患者数"
           :chart-data="currentPatientsGraph"
           :date="convertToDateFromData(currentPatients.last_update)"
-          sourceFrom="北海道庁webサイト"
-          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+          sourceFrom="北海道 オープンデータポータル"
+          sourceLink="https://www.harp.lg.jp/opendata/dataset/1369.html"
           :unit="'人'"
           :defaultDataKind="'cumulative'"
         />
@@ -28,8 +28,8 @@
           title="治療終了者数"
           :chart-data="dischargesGraph"
           :date="convertToDateFromData(dischargesSummary.last_update)"
-          sourceFrom="北海道庁webサイト"
-          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+          sourceFrom="北海道 オープンデータポータル"
+          sourceLink="https://www.harp.lg.jp/opendata/dataset/1369.html"
           :unit="'人'"
           :defaultDataKind="'cumulative'"
           :supplement="'治療終了者数とは道発表の「陰性確認済累計」と同じものです。「陰性確認済累計」とは、陽性の患者が軽快してから48時間後の1回目のPCR検査で陰性が確認され、それから12時間後の2回目のPCR検査でも陰性が確認された方の累計のことです。（3/9 鈴木知事のツイートから引用）'"
@@ -40,8 +40,8 @@
           title="陽性患者数"
           :chart-data="patientsGraph"
           :date="convertToDateFromData(patients.last_update)"
-          sourceFrom="北海道庁webサイト"
-          sourceLink="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
+          sourceFrom="北海道 オープンデータポータル"
+          sourceLink="https://www.harp.lg.jp/opendata/dataset/1369.html"
           :unit="'人'"
           :defaultDataKind="'cumulative'"
         />
@@ -52,8 +52,8 @@
           :chart-data="patientsTable"
           :chart-option="{}"
           :date="convertToDateFromData(patients.last_update)"
-          sourceFrom="北海道庁webサイト"
-          sourceLink="http://www.pref.hokkaido.lg.jp/hf/kth/kak/hasseijoukyou.htm"
+          sourceFrom="北海道 オープンデータポータル"
+          sourceLink="https://www.harp.lg.jp/opendata/dataset/1369.html"
           :info="sumInfoOfPatients"
         />
       </v-col>
