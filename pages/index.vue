@@ -59,6 +59,19 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
+          title="検査数"
+          :chart-data="inspectionsGraph"
+          :date="convertToDateFromData(inspections.last_update)"
+          sourceFrom="北海道 オープンデータポータル"
+          sourceLink="https://www.harp.lg.jp/opendata/dataset/1369.html"
+          :unit="'人'"
+          :defaultDataKind="'cumulative'"
+          :showButton="false"
+          :supplement="'3月3日以前のデータが公開されていないため、グラフは3月3日以降となります。'"
+        />
+      </v-col>
+      <v-col cols="12" md="6" class="DataCard">
+        <time-bar-chart
           title="新型コロナコールセンター相談件数(札幌市保健所値)"
           :chart-data="contactsGraph"
           :date="convertToDateFromData(contacts.last_update)"
@@ -94,6 +107,7 @@ import contacts from '@/data/contacts.json'
 import querents from '@/data/querents.json'
 import currentPatients from '@/data/current_patients.json'
 import dischargesSummary from '@/data/discharges_summary.json'
+import inspections from '@/data/inspections.json'
 import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
@@ -119,6 +133,8 @@ export default {
     const patientsTable = formatTable(patients.data)
     // 陰性確認数グラフ
     const dischargesGraph = formatGraph(dischargesSummary.data)
+    // 検査数グラフ
+    const inspectionsGraph = formatGraph(inspections.data)
     // 相談件数
     const contactsGraph = formatGraph(contacts.data)
     // 帰国者・接触者電話相談センター相談件数
@@ -139,12 +155,14 @@ export default {
       contacts,
       currentPatients,
       dischargesSummary,
+      inspections,
       patientsTable,
       patientsGraph,
       contactsGraph,
       querentsGraph,
       currentPatientsGraph,
       dischargesGraph,
+      inspectionsGraph,
       sumInfoOfPatients,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
