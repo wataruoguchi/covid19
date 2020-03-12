@@ -374,8 +374,8 @@ export default {
     }
     & .cc-by-logo {
       width: auto;
-      height: 1rem;
-      vertical-align: text-bottom;
+      height: 1.8rem;
+      vertical-align: text-top;
     }
     & a.license {
       display: inline-block;
