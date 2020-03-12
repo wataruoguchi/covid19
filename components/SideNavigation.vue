@@ -53,7 +53,12 @@
             target="_blank"
             rel="noopener"
           >
-            <img src="/twitter.png" width="90px" height="90px" alt="Twitter" />
+            <img
+              src="/twitter.png"
+              width="90px"
+              height="90px"
+              alt="Twitter"
+            />
           </a>
           <a
             href="https://www.facebook.com/Justdouit19/"
@@ -67,14 +72,55 @@
               alt="Facebook"
             />
           </a>
+          <a
+            href="https://github.com/codeforsapporo/covid19"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/github.png"
+              width="90px"
+              height="90px"
+              alt="GitHub"
+            />
+          </a>
         </div>
         <div class="SideNavigation-SponsorLinkContainer">
+          Data by:<br />
+          <a href="/about/#data" target="_blank" rel="noopener">
+            <span class="no-image-title">北海道</span><br />
+            <span class="no-image-title">札幌市</span>
+          </a><br />
+          <a class="license" href="//creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener">
+            Under
+            <span class="image-title">CC BY 4.0</span>
+            <img
+              class="cc-by-logo"
+              src="/cc-by-mini.svg"
+              width="85.3px"
+              height="16px"
+              alt="CC BY 4.0"
+            />
+          </a><br />
+          Operations by:<br />
+          <a href="/about/" target="_blank" rel="noopener">
+            <span class="image-title">JUST道IT</span>
+            <img
+              class="justdoit-logo"
+              src="/justdouit.png"
+              width="132px"
+              height="46.6px"
+              alt="JUST道IT"
+            />
+          </a><br />
           Powered by:<br />
           <a href="https://www.sakura.ad.jp/" target="_blank" rel="noopener">
+            <span class="image-title">さくらインターネット</span>
             <img
+              class="sakura-internet-logo"
               src="/sakura.svg"
-              width="172px"
-              height="46.5px"
+              width="176px"
+              height="62px"
               alt="さくらインターネット"
             />
           </a>
@@ -285,19 +331,53 @@ export default {
         margin-right: 10px;
       }
     }
+    
   }
   &-SponsorLinkContainer {
     overflow: visible;
-    padding-top: 6px;
+    padding-top: .8rem;
     white-space: normal;
     font-size: 0.82rem;
     color: $gray-1;
+    & a {
+      color: #333;
+      text-decoration: none;
+    }
+    & a:hover {
+      opacity: .6;
+    }
     & img {
-      width: 172px;
-      margin: -6px -10px;
-      &:first-of-type {
-        margin-right: 10px;
-      }
+      padding-bottom: .9rem;
+    }
+    & img.justdouit-logo {
+      margin: 0 0 0 -3px;
+      width: 132px;
+    }
+    & img.sakura-internet-logo {
+      margin: -6px 0 0 -14px;
+      width: 176px;
+    }
+    & .image-title {
+      display: inline-block;
+      width: 0;
+      height: 1.5rem;
+      overflow: hidden;
+    }
+    & .no-image-title {
+      display: inline-block;
+      line-height: 1.8rem;
+      color: #444;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    & .cc-by-logo {
+      width: auto;
+      height: 1.8rem;
+      vertical-align: text-top;
+    }
+    & a.license {
+      display: inline-block;
+      margin: -.7rem 0 .2rem 0;
     }
   }
   &-Copyright {
