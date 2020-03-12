@@ -112,12 +112,12 @@
     <TextCard title="データについて">
       当サイトで公表しているデータは、北海道オープンデータカタログサイト(準備中)より誰でも自由にダウンロードが可能です。
     </TextCard>
-
     -->
     <TextCard title="お問い合わせ先">
       当サイトについてのお問い合わせは<br />
       <a target="_blank" href="https://www.facebook.com/Justdouit19/" rel="noopener">JUST道IT Facebookページ</a>までお願いします。
     </TextCard>
+
     <TextCard title="">
       <img src="/ogp.png"/>
       Illustration by <a href="https://twitter.com/LITTLEKIT">LITTLEKIT</a> under <a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>
