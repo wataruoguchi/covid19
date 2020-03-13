@@ -7,9 +7,9 @@
     />
     <whats-new
       class="mb-4"
-      date="2020年3月9日"
+      date=""
       url="http://www.pref.hokkaido.lg.jp/ss/tkk/singatakoronahaien.htm"
-      text="北海道における新型コロナウイルス感染症の検査陽性者の状況（R2.3.9現在）"
+      text="北海道発表の新型コロナウイルス感染症に関する情報はこちら"
     />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
