@@ -4,7 +4,7 @@
       <div class="gutter">
         <div class="box tall">
           <span>
-            検査実施<br />人数
+            検査人数
           </span>
           <span>
             <b>{{ inspections }}</b>
@@ -66,7 +66,7 @@
         <li class="item deceased">
           <div class="gutter">
             <div class="box">
-              <span>死亡</span>
+              <span>死亡累計</span>
               <span>
                 <b>{{ losts }}</b>
                 <span class="unit">人</span>
