@@ -47,7 +47,7 @@ const config: Configuration = {
         hid: 'og:image',
         property: 'og:image',
         content:
-          'https://user-images.githubusercontent.com/941125/76678766-ec22a680-661d-11ea-9088-493e761fabdb.png'
+          'https://user-images.githubusercontent.com/941125/76679803-bafaa400-6626-11ea-8f07-955942a93507.png'
       } // ,
       // {
       //   hid: 'twitter:card',
