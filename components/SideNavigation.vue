@@ -121,7 +121,8 @@ export default {
         {
           icon: 'covid',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
-          link: this.localePath('/flow'),
+          link:
+            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#soudan',
           divider: true
         },
         {
@@ -131,37 +132,38 @@ export default {
         },
         {
           icon: 'mdi-account-multiple',
-          title: this.$t('都民の皆様へ'),
-          link: 'https://www.metro.tokyo.lg.jp/tosei/tosei/news/2019-ncov.html'
-        },
-        {
-          icon: 'mdi-domain',
-          title: this.$t('企業の皆様・はたらく皆様へ'),
-          link: this.localePath('/worker'),
-          divider: true
-        },
-        {
-          title: this.$t('東京都新型コロナウイルス感染症対策本部報'),
+          title: this.$t('県民の皆様へ'),
           link:
-            'https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/index.html'
+            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html'
         },
-        {
-          title: this.$t('東京都主催等 中止又は延期するイベント等'),
-          link:
-            'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event00.html'
-        },
-        {
-          title: this.$t('知事からのメッセージ'),
-          link:
-            'https://www.metro.tokyo.lg.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
-        },
+        // {
+        //   icon: 'mdi-domain',
+        //   title: this.$t('企業の皆様・はたらく皆様へ'),
+        //   link: this.localePath('/worker'),
+        //   divider: true
+        // },
+        // {
+        //   title: this.$t('東京都新型コロナウイルス感染症対策本部報'),
+        //   link:
+        //     'https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/index.html'
+        // },
+        // {
+        //   title: this.$t('東京都主催等 中止又は延期するイベント等'),
+        //   link:
+        //     'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event00.html'
+        // },
+        // {
+        //   title: this.$t('知事からのメッセージ'),
+        //   link:
+        //     'https://www.metro.tokyo.lg.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
+        // },
         {
           title: this.$t('当サイトについて'),
           link: this.localePath('/about')
         },
         {
-          title: this.$t('東京都公式ホームページ'),
-          link: 'https://www.metro.tokyo.lg.jp/',
+          title: this.$t('長野県公式ホームページ'),
+          link: 'https://www.pref.nagano.lg.jp/',
           divider: true
         }
       ]
