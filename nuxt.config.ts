@@ -30,7 +30,7 @@ const config: Configuration = {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp'
+        content: 'https://stop-covid19-nagano.netlify.com'
       },
       {
         hid: 'og:title',
@@ -47,7 +47,7 @@ const config: Configuration = {
         hid: 'og:image',
         property: 'og:image',
         content:
-          'https://github.com/hisayan/covid19/workflows/production%20deploy/badge.svg'
+          'https://user-images.githubusercontent.com/941125/76678766-ec22a680-661d-11ea-9088-493e761fabdb.png'
       } // ,
       // {
       //   hid: 'twitter:card',
