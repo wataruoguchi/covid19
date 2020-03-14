@@ -8,19 +8,21 @@
     <whats-new class="mb-4" :items="newsItems" />
     <static-info
       class="mb-4"
-      :url="localePath('/flow')"
+      :url="
+        `https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#soudan`
+      "
       :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
-      :btn-text="$t('相談の手順を見る')"
+      :btn-text="$t('24時間対応')"
     />
     <v-row class="DataBlock">
-      <confirmed-cases-details-card />
+      <!-- <confirmed-cases-details-card /> -->
       <confirmed-cases-number-card />
       <confirmed-cases-attributes-card />
-      <tested-number-card />
+      <!-- <tested-number-card />
       <telephone-advisory-reports-number-card />
       <consultation-desk-reports-number-card />
       <metro-card />
-      <agency-card />
+      <agency-card /> -->
     </v-row>
   </div>
 </template>
@@ -35,28 +37,28 @@ import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 // import formatTable from '@/utils/formatTable'
 import News from '@/data/news.json'
-import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
+// import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
-import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
-import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
-import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
-import MetroCard from '@/components/cards/MetroCard.vue'
-import AgencyCard from '@/components/cards/AgencyCard.vue'
+// import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
+// import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
+// import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
+// import MetroCard from '@/components/cards/MetroCard.vue'
+// import AgencyCard from '@/components/cards/AgencyCard.vue'
 
 export default {
   components: {
     PageHeader,
     WhatsNew,
     StaticInfo,
-    ConfirmedCasesDetailsCard,
+    // ConfirmedCasesDetailsCard,
     ConfirmedCasesNumberCard,
-    ConfirmedCasesAttributesCard,
-    TestedNumberCard,
-    TelephoneAdvisoryReportsNumberCard,
-    ConsultationDeskReportsNumberCard,
-    MetroCard,
-    AgencyCard
+    ConfirmedCasesAttributesCard
+    // TestedNumberCard,
+    // TelephoneAdvisoryReportsNumberCard,
+    // ConsultationDeskReportsNumberCard,
+    // MetroCard,
+    // AgencyCard
   },
   data() {
     // 退院者グラフ

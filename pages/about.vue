@@ -138,7 +138,7 @@
         )
       }}
     </TextCard>
-    <TextCard :title="$t('データについて')">
+    <!-- <TextCard :title="$t('データについて')">
       <i18n
         tag="p"
         path="本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です。（データは順次追加予定です）"
@@ -152,7 +152,7 @@
           {{ $t('東京都オープンデータカタログサイト') }}
         </a>
       </i18n>
-    </TextCard>
+    </TextCard> -->
     <TextCard :title="$t('ソースコードについて')">
       {{
         $t(
@@ -161,7 +161,7 @@
       }}
       <i18n path="詳しくは、{githubRepo}をご確認ください。">
         <a
-          href="https://github.com/tokyo-metropolitan-gov/covid19"
+          href="https://github.com/hisayan/covid19"
           target="_blank"
           rel="noopener"
           place="githubRepo"
@@ -170,11 +170,11 @@
         </a>
       </i18n>
     </TextCard>
-    <TextCard :title="$t('お問い合わせ先（都のHPサイトポリシーについて）')">
+    <!-- <TextCard :title="$t('お問い合わせ先（都のHPサイトポリシーについて）')">
       {{ $t('東京都生活文化局広報広聴部広報課') }}<br />
       {{ $t('電話') }}:
       <a href="tel:03-5388-3085">03-5388-3085</a>
-    </TextCard>
+    </TextCard> -->
   </div>
 </template>
 
