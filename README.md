@@ -3,7 +3,7 @@
 ![](https://github.com/hisayan/covid19/workflows/production%20deploy/badge.svg)
 
 [長野県 非公式 新型コロナウイルス感染症対策サイト](https://stop-covid19-nagano.netlify.com/)
-[![長野県 非公式 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/941125/76682827-9280a300-6642-11ea-972b-7864b3d7256b.png)](https://stop-covid19-nagano.netlify.com/)
+[![長野県 非公式 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/941125/76682913-4e41d280-6643-11ea-91a4-c2e2b53650fc.png)](https://stop-covid19-nagano.netlify.com/)
 
 
 ### 日本語 | [English](./README_EN.md) | [Spanish](./README_ES.md) | [Korean](./README_KO.md) | [Chinese (Taiwan)](./README_ZH_TW.md) | [Chinese (Simplified)](./README_ZH_CN.md) | [Vietnamese](./README_VI.md)
