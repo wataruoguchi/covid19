@@ -11,7 +11,7 @@ const config: Configuration = {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s | 東京都 新型コロナウイルス感染症対策サイト',
+    titleTemplate: '%s | 長野県 新型コロナウイルス感染症対策サイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,12 +19,12 @@ const config: Configuration = {
         hid: 'description',
         name: 'description',
         content:
-          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、長野県の有志が開設したものです。'
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '東京都 新型コロナウイルス感染症対策サイト'
+        content: '長野県 新型コロナウイルス感染症対策サイト'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -35,13 +35,13 @@ const config: Configuration = {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '東京都 新型コロナウイルス感染症対策サイト'
+        content: '長野県 新型コロナウイルス感染症対策サイト'
       },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、長野県の有志が開設したものです。'
       },
       {
         hid: 'og:image',
@@ -126,15 +126,15 @@ const config: Configuration = {
       {
         strategy: 'prefix_except_default',
         detectBrowserLanguage: {
-          useCookie: true,
-          cookieKey: 'i18n_redirected'
+          // useCookie: true,
+          // cookieKey: 'i18n_redirected'
         },
         locales: [
           {
             code: 'ja',
             name: '日本語',
             iso: 'ja-JP'
-          },
+          } /*,
           {
             code: 'en',
             name: 'English',
@@ -168,7 +168,7 @@ const config: Configuration = {
             code: 'ja-basic',
             name: 'やさしい にほんご',
             iso: 'ja-JP'
-          }
+          } */
         ],
         defaultLocale: 'ja',
         vueI18n: {
@@ -198,7 +198,7 @@ const config: Configuration = {
     }
   },
   googleAnalytics: {
-    id: 'UA-159417676-1'
+    id: 'UA-160681637-1'
   },
   build: {
     postcss: {
@@ -221,7 +221,7 @@ const config: Configuration = {
     hardSource: process.env.NODE_ENV === 'development'
   },
   manifest: {
-    name: '東京都 新型コロナウイルス感染症対策サイト',
+    name: '長野県 新型コロナウイルス感染症対策サイト',
     theme_color: '#00a040',
     background_color: '#ffffff',
     display: 'standalone',

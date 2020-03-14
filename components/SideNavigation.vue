@@ -9,11 +9,13 @@
         mdi-menu
       </v-icon>
       <nuxt-link :to="localePath('/')" class="SideNavigation-HeadingLink">
-        <div class="SideNavigation-Logo">
-          <img src="/logo.svg" :alt="$t('東京都')" />
-        </div>
+        <!-- <div class="SideNavigation-Logo">
+          <img src="/logo.svg" :alt="$t('長野県')" />
+        </div> -->
         <h1 class="SideNavigation-Heading">
-          {{ $t('新型コロナウイルス感染症') }}<br />{{ $t('対策サイト') }}
+          {{ $t('長野県') }} {{ $t('非公式') }}<br />{{
+            $t('新型コロナウイルス感染症')
+          }}<br />{{ $t('対策サイト') }}
         </h1>
       </nuxt-link>
     </header>
@@ -39,7 +41,7 @@
           </v-container>
         </v-list>
         <div class="SideNavigation-LanguageMenu">
-          <LanguageSelector />
+          <!-- <LanguageSelector /> -->
         </div>
       </nav>
       <v-footer class="SideNavigation-Footer">
@@ -95,12 +97,12 @@
 
 <script>
 import ListItem from '@/components/ListItem'
-import LanguageSelector from '@/components/LanguageSelector.vue'
+// import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
   components: {
-    ListItem,
-    LanguageSelector
+    ListItem
+    // LanguageSelector
   },
   props: {
     isNaviOpen: {
@@ -113,7 +115,7 @@ export default {
       return [
         {
           icon: 'mdi-chart-timeline-variant',
-          title: this.$t('都内の最新感染動向'),
+          title: this.$t('県内の最新感染動向'),
           link: this.localePath('/')
         },
         {
