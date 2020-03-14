@@ -46,33 +46,34 @@ const config: Configuration = {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
-      },
-      {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      {
-        hid: 'twitter:site',
-        name: 'twitter:site',
-        content: '@tokyo_bousai'
-      },
-      {
-        hid: 'twitter:creator',
-        name: 'twitter:creator',
-        content: '@tokyo_bousai'
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
-      },
-      {
-        hid: 'fb:app_id',
-        property: 'fb:app_id',
-        content: '2879625188795443'
-      }
+        content:
+          'https://github.com/hisayan/covid19/workflows/production%20deploy/badge.svg'
+      } // ,
+      // {
+      //   hid: 'twitter:card',
+      //   name: 'twitter:card',
+      //   content: 'summary_large_image'
+      // },
+      // {
+      //   hid: 'twitter:site',
+      //   name: 'twitter:site',
+      //   content: '@tokyo_bousai'
+      // },
+      // {
+      //   hid: 'twitter:creator',
+      //   name: 'twitter:creator',
+      //   content: '@tokyo_bousai'
+      // },
+      // {
+      //   hid: 'twitter:image',
+      //   name: 'twitter:image',
+      //   content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
+      // },
+      // {
+      //   hid: 'fb:app_id',
+      //   property: 'fb:app_id',
+      //   content: '2879625188795443'
+      // }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

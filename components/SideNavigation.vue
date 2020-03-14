@@ -46,7 +46,7 @@
       </nav>
       <v-footer class="SideNavigation-Footer">
         <div class="SideNavigation-SocialLinkContainer">
-          <a
+          <!-- <a
             href="https://line.me/R/ti/p/%40822sysfc"
             target="_blank"
             rel="noopener"
@@ -66,9 +66,9 @@
             rel="noopener"
           >
             <img src="/facebook.png" alt="Facebook" />
-          </a>
+          </a> -->
           <a
-            href="https://github.com/tokyo-metropolitan-gov/covid19"
+            href="https://github.com/hisayan/covid19"
             target="_blank"
             rel="noopener"
           >
@@ -86,7 +86,7 @@
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020 Tokyo Metropolitan Government
+          2020 長野県非公式 COVID-19 対策サイト
         </small>
       </v-footer>
     </div>
