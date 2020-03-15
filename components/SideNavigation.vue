@@ -9,9 +9,9 @@
         mdi-menu
       </v-icon>
       <nuxt-link :to="localePath('/')" class="SideNavigation-HeadingLink">
-        <!-- <div class="SideNavigation-Logo">
+        <div class="SideNavigation-Logo">
           <img src="/logo.svg" :alt="$t('長野県')" />
-        </div> -->
+        </div>
         <h1 class="SideNavigation-Heading">
           {{ $t('長野県') }} {{ $t('非公式') }}<br />{{
             $t('新型コロナウイルス感染症')
