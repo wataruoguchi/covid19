@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <time-bar-chart
-      :title="$t('新型コロナウイルス感染症に関する相談件数')"
+      :title="$t('新型コロナ受診相談窓口相談件数')"
       :title-id="'number-of-reports-to-covid19-consultation-desk'"
       :chart-id="'time-bar-chart-querents'"
       :chart-data="querentsGraph"
@@ -16,37 +16,37 @@
 <i18n>
 {
   "ja": {
-    "新型コロナウイルス感染症に関する相談件数": "新型コロナウイルス感染症に関する相談件数",
+    "新型コロナ受診相談窓口相談件数": "新型コロナ受診相談窓口相談件数",
     "件": {
       "reports": "件"
     }
   },
   "en": {
-    "新型コロナウイルス感染症に関する相談件数": "Number of inquiries to combined telephone advisory center",
+    "新型コロナ受診相談窓口相談件数": "Number of inquiries to combined telephone advisory center",
     "件": {
       "reports": "reports"
     }
   },
   "zh-cn": {
-    "新型コロナウイルス感染症に関する相談件数": "新冠肺炎就诊咨询窗口的咨询数",
+    "新型コロナ受診相談窓口相談件数": "新冠肺炎就诊咨询窗口的咨询数",
     "件": {
       "reports": "件"
     }
   },
   "zh-tw": {
-    "新型コロナウイルス感染症に関する相談件数": "就診窗口諮詢數",
+    "新型コロナ受診相談窓口相談件数": "就診窗口諮詢數",
     "件": {
       "reports": "件"
     }
   },
   "ko": {
-    "新型コロナウイルス感染症に関する相談件数": "코로나19 진찰 상담 창구 상담 건수",
+    "新型コロナ受診相談窓口相談件数": "코로나19 진찰 상담 창구 상담 건수",
     "件": {
       "reports": "건"
     }
   },
   "ja-basic": {
-    "新型コロナウイルス感染症に関する相談件数": "コロナのことで とうきょうと に そうだんした ひとの かず",
+    "新型コロナ受診相談窓口相談件数": "コロナのことで とうきょうと に そうだんした ひとの かず",
     "件": {
       "reports": "けん"
     }
