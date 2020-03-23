@@ -1,6 +1,16 @@
 {
     "newsItems": [
         {
+        "date": "3/17/2020",
+        "url": "https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#kennaidoko",
+        "text": "本県の発生状況、相談・検査状況等をまとめた「新型コロナウイルス感染症の県内動向」を公開しました"
+        },
+        {
+        "date": "3/15/2020",
+        "url": "https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#hassei",
+        "text": "「これまでの発生状況について」を更新しました"
+        },
+        {
             "date": "3\/14\/2020",
             "url": "https:\/\/www.pref.nagano.lg.jp\/hoken-shippei\/kenko\/kenko\/kansensho\/joho\/bukan-haien.html#kaigairyokou",
             "text": "「海外渡航や国内旅行等に関するお願い」を掲載しました"
