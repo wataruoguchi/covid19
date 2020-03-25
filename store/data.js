@@ -2,17 +2,7 @@ import axios from 'axios'
 import Data from '@/data/data.json'
 
 export const state = () => ({
-  data: {
-    // contacts: {},
-    // querents: {},
-    // patients: {},
-    // patients_summary: {},
-    // discharges_summary: {},
-    // inspections: {},
-    // inspections_summary: {},
-    // main_summary: {},
-    // lastUpdate: ''
-  }
+  data: Data
 })
 
 export const mutations = {
