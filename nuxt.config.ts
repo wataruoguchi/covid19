@@ -130,6 +130,7 @@ const config: Configuration = {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    'nuxt-client-init-module',
     [
       'nuxt-i18n',
       {
@@ -196,12 +197,6 @@ const config: Configuration = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
-  /*
-   ** Nuxt.js router
-   */
-  router: {
-    middleware: ['getData']
-  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
