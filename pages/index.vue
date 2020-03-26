@@ -13,6 +13,7 @@
       "
       :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
       :btn-text="$t('24時間対応')"
+      target="_blank"
     />
     <v-row class="DataBlock">
       <confirmed-cases-details-card />
