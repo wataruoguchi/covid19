@@ -5,14 +5,16 @@
     :href="isInternalLink(url) ? '' : url"
     class="StaticInfo"
   >
-    <span>{{ text }}</span>
-    <v-icon
-      v-if="!isInternalLink(url)"
-      class="StaticInfo-item-ExternalLinkIcon"
-      size="12"
-    >
-      mdi-open-in-new
-    </v-icon>
+    <span>
+      {{ text }}
+      <v-icon
+        v-if="!isInternalLink(url)"
+        class="StaticInfo-item-ExternalLinkIcon"
+        size="12"
+      >
+        mdi-open-in-new
+      </v-icon>
+    </span>
     <div v-if="btnText" class="StaticInfo-Button">
       <span>
         {{ btnText }}
