@@ -6,6 +6,13 @@
     class="StaticInfo"
   >
     <span>{{ text }}</span>
+    <v-icon
+      v-if="!isInternalLink(url)"
+      class="StaticInfo-item-ExternalLinkIcon"
+      size="12"
+    >
+      mdi-open-in-new
+    </v-icon>
     <div v-if="btnText" class="StaticInfo-Button">
       <span>
         {{ btnText }}
@@ -54,6 +61,12 @@ export default class StaticInfo extends Vue {
     }
     @include lessThan($small) {
       margin-top: 4px;
+    }
+  }
+  &-item {
+    &-ExternalLinkIcon {
+      margin-left: 2px;
+      color: $gray-3 !important;
     }
   }
 }
