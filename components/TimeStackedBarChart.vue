@@ -250,6 +250,7 @@ export default {
               ticks: {
                 suggestedMin: 0,
                 maxTicksLimit: 8,
+                stepSize: 1,
                 fontColor: '#808080'
               }
             }

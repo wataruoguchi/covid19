@@ -142,6 +142,7 @@ export default {
                 fontSize: 9,
                 fontColor: '#808080',
                 maxTicksLimit: 10,
+                stepSize: 1,
                 callback(label) {
                   return `${label}${self.unit}`
                 }
