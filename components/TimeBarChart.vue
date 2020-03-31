@@ -28,6 +28,8 @@ import DataView from '@/components/DataView.vue'
 import DataSelector from '@/components/DataSelector.vue'
 import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
 
+import { single as color } from '@/utils/colors'
+
 export default {
   components: { DataView, DataSelector, DataViewBasicInfoPanel },
   props: {
@@ -117,7 +119,7 @@ export default {
               data: this.chartData.map(d => {
                 return d.transition
               }),
-              backgroundColor: '#189b58',
+              backgroundColor: color,
               borderWidth: 0
             }
           ]
@@ -133,7 +135,7 @@ export default {
             data: this.chartData.map(d => {
               return d.cumulative
             }),
-            backgroundColor: '#00B849',
+            backgroundColor: color,
             borderWidth: 0
           }
         ]
@@ -234,6 +236,7 @@ export default {
               ticks: {
                 suggestedMin: 0,
                 maxTicksLimit: 8,
+                stepSize: 1,
                 fontColor: '#808080',
                 suggestedMax: scaledTicksYAxisMax
               }
