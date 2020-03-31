@@ -13,8 +13,7 @@
           <img src="/logo.svg" :alt="$t('長野県')" />
         </div>
         <h1 class="SideNavigation-Heading">
-          {{ $t('長野県 非公式') }}<br />{{
-            $t('新型コロナウイルス感染症')
+          {{ $t('長野県 非公式') }}<br />{{ $t('新型コロナウイルス感染症')
           }}<br />{{ $t('対策サイト') }}
         </h1>
       </nuxt-link>
