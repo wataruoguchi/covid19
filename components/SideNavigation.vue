@@ -13,8 +13,7 @@
           <img src="/logo.svg" :alt="$t('長野県')" />
         </div>
         <h1 class="SideNavigation-Heading">
-          {{ $t('長野県') }} {{ $t('非公式') }}<br />{{
-            $t('新型コロナウイルス感染症')
+          {{ $t('長野県 非公式') }}<br />{{ $t('新型コロナウイルス感染症')
           }}<br />{{ $t('対策サイト') }}
         </h1>
       </nuxt-link>
@@ -80,7 +79,7 @@
           <a
             rel="license"
             target="_blank"
-            :href="$t('https://creativecommons.org/licenses/by/4.0/deed.ja')"
+            href="https://creativecommons.org/licenses/by/4.0/deed.ja"
           >
             {{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}
           </a>
