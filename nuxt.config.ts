@@ -57,12 +57,12 @@ const config: Configuration = {
         property: 'og:image',
         content:
           'https://user-images.githubusercontent.com/941125/76682913-4e41d280-6643-11ea-91a4-c2e2b53650fc.png'
-      } // ,
-      // {
-      //   hid: 'twitter:card',
-      //   name: 'twitter:card',
-      //   content: 'summary_large_image'
-      // },
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
       // {
       //   hid: 'twitter:site',
       //   name: 'twitter:site',
@@ -73,16 +73,17 @@ const config: Configuration = {
       //   name: 'twitter:creator',
       //   content: '@tokyo_bousai'
       // },
-      // {
-      //   hid: 'twitter:image',
-      //   name: 'twitter:image',
-      //   content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
-      // },
-      // {
-      //   hid: 'fb:app_id',
-      //   property: 'fb:app_id',
-      //   content: '2879625188795443'
-      // }
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content:
+          'https://user-images.githubusercontent.com/941125/76682913-4e41d280-6643-11ea-91a4-c2e2b53650fc.png'
+      },
+      {
+        hid: 'fb:app_id',
+        property: 'fb:app_id',
+        content: '1160768984265556'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
