@@ -40,7 +40,7 @@
           </v-container>
         </v-list>
         <div class="SideNavigation-LanguageMenu">
-          <!-- <LanguageSelector /> -->
+          <LanguageSelector />
         </div>
       </nav>
       <v-footer class="SideNavigation-Footer">
@@ -85,23 +85,21 @@
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020 長野県非公式 COVID-19 対策サイト
+          {{ $t('2020 長野県非公式 COVID-19 対策サイト') }}
         </small>
       </v-footer>
     </div>
   </div>
 </template>
 
-<i18n src="./SideNavigation.i18n.json"></i18n>
-
 <script>
 import ListItem from '@/components/ListItem'
-// import LanguageSelector from '@/components/LanguageSelector.vue'
+import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
   components: {
-    ListItem
-    // LanguageSelector
+    ListItem,
+    LanguageSelector
   },
   props: {
     isNaviOpen: {
