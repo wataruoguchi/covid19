@@ -119,7 +119,7 @@ export default {
           icon: 'covid',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
           link:
-            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona.html#soudan',
+            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona-soudan.html#soudan',
           divider: true
         },
         {
