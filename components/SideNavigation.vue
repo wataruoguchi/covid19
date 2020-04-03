@@ -119,7 +119,7 @@ export default {
           icon: 'covid',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
           link:
-            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#soudan',
+            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona.html#soudan',
           divider: true
         },
         {
@@ -131,7 +131,7 @@ export default {
           icon: 'mdi-account-multiple',
           title: this.$t('県民の皆様へ'),
           link:
-            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html'
+            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona.html'
         },
         // {
         //   icon: 'mdi-domain',
