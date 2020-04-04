@@ -9,8 +9,6 @@
   </div>
 </template>
 
-<i18n src="./parent.i18n.json"></i18n>
-
 <script>
 import TextCard from '@/components/TextCard.vue'
 
@@ -41,7 +39,7 @@ export default {
           body: [
             this.$t('各保健所にご相談ください'),
             this.$t('「新型コロナウイルス感染症にかかる相談窓口について」'),
-            '<a href="https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#soudan" target="_blank" rel="noopener">https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#soudan</a>'
+            '<a href="https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona-soudan.html#soudan" target="_blank" rel="noopener">https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona-soudan.html#soudan</a>'
           ].join('<br />')
         },
         {
