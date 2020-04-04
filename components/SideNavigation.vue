@@ -13,8 +13,7 @@
           <img src="/logo.svg" :alt="$t('長野県')" />
         </div>
         <h1 class="SideNavigation-Heading">
-          {{ $t('長野県') }} {{ $t('非公式') }}<br />{{
-            $t('新型コロナウイルス感染症')
+          {{ $t('長野県 非公式') }}<br />{{ $t('新型コロナウイルス感染症')
           }}<br />{{ $t('対策サイト') }}
         </h1>
       </nuxt-link>
@@ -41,7 +40,7 @@
           </v-container>
         </v-list>
         <div class="SideNavigation-LanguageMenu">
-          <!-- <LanguageSelector /> -->
+          <LanguageSelector />
         </div>
       </nav>
       <v-footer class="SideNavigation-Footer">
@@ -80,29 +79,27 @@
           <a
             rel="license"
             target="_blank"
-            :href="$t('https://creativecommons.org/licenses/by/4.0/deed.ja')"
+            href="https://creativecommons.org/licenses/by/4.0/deed.ja"
           >
             {{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020 長野県非公式 COVID-19 対策サイト
+          {{ $t('2020 長野県非公式 COVID-19 対策サイト') }}
         </small>
       </v-footer>
     </div>
   </div>
 </template>
 
-<i18n src="./SideNavigation.i18n.json"></i18n>
-
 <script>
 import ListItem from '@/components/ListItem'
-// import LanguageSelector from '@/components/LanguageSelector.vue'
+import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
   components: {
-    ListItem
-    // LanguageSelector
+    ListItem,
+    LanguageSelector
   },
   props: {
     isNaviOpen: {
@@ -122,7 +119,7 @@ export default {
           icon: 'covid',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
           link:
-            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#soudan',
+            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona-soudan.html#soudan',
           divider: true
         },
         {
@@ -134,7 +131,7 @@ export default {
           icon: 'mdi-account-multiple',
           title: this.$t('県民の皆様へ'),
           link:
-            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html'
+            'https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona.html'
         },
         // {
         //   icon: 'mdi-domain',

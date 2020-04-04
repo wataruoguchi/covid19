@@ -9,7 +9,7 @@
     <static-info
       class="mb-4"
       :url="
-        `https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/bukan-haien.html#soudan`
+        `https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona-soudan.html#soudan`
       "
       :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
       :btn-text="$t('24時間対応')"
@@ -27,8 +27,6 @@
     </v-row>
   </div>
 </template>
-
-<i18n src="./index.i18n.json"></i18n>
 
 <script>
 import PageHeader from '@/components/PageHeader.vue'

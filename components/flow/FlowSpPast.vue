@@ -117,8 +117,6 @@
   </div>
 </template>
 
-<i18n src="./FlowSpPast.i18n.json"></i18n>
-
 <script lang="ts">
 import ArrowForwardIcon from '@/static/flow/arrow_forward-24px.svg'
 
