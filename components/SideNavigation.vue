@@ -53,18 +53,24 @@
             target="_blank"
             rel="noopener noreferrer"
             class="SideNavigation-SocialLink"
+          > -->
+          <a
+            href="https://www.pref.nagano.lg.jp/hoken-shippei/kenko/kenko/kansensho/joho/corona-line.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SideNavigation-SocialLink"
           >
             <img src="/line.png" alt="LINE" />
           </a>
-          <a
+          <!-- <a
             href="https://twitter.com/tokyo_bousai"
             target="_blank"
             rel="noopener noreferrer"
             class="SideNavigation-SocialLink"
           >
             <img src="/twitter.png" alt="Twitter" />
-          </a>
-          <a
+          </a> -->
+          <!-- <a
             href="https://www.facebook.com/tochokoho"
             target="_blank"
             rel="noopener noreferrer"
@@ -72,6 +78,14 @@
           >
             <img src="/facebook.png" alt="Facebook" />
           </a> -->
+          <a
+            href="https://www.youtube.com/channel/UCUdpuTxrK48m9O9dlPpo7yA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SideNavigation-SocialLink"
+          >
+            <img src="/youtube.png" alt="YouTube" />
+          </a>
           <a
             href="https://github.com/hisayan/covid19"
             target="_blank"
