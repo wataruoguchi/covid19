@@ -191,8 +191,8 @@ export default Vue.extend({
         },
         {
           title: this.$t('長野県公式ホームページ'),
-          link: 'https://www.pref.nagano.lg.jp/',
-          divider: true
+          link: 'https://www.pref.nagano.lg.jp/'
+          // divider: true
         }
       ]
     }
