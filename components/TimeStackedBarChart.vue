@@ -1,12 +1,12 @@
 <template>
-  <data-view :title="title" :title-id="titleId" :date="date">
+  <data-view :title="title" :title-id="titleId" :date="date" :url="url">
     <template v-slot:button>
       <p class="Graph-Desc">
-        {{ $t('（注）同一の対象者について複数の検体を調査する場合あり') }}
+        {{ $t('（注）同一の対象者について複数の検体を検査する場合あり') }}
         <br />
         {{
           $t(
-            '検査実施数は、速報値として公開するものであり、後日確定データとして修正される場合があります'
+            '検査実施人数は、速報値として公開するものであり、後日確定データとして修正される場合があります'
           )
         }}
       </p>
@@ -72,6 +72,11 @@ export default {
       default: () => []
     },
     unit: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    url: {
       type: String,
       required: false,
       default: ''
@@ -141,7 +146,7 @@ export default {
           displayColors: false,
           callbacks: {
             label: tooltipItem => {
-              const labelTokyo = this.$t('都内')
+              const labelTokyo = this.$t('県内')
               const labelOthers = this.$t('その他')
               const labelArray = [labelTokyo, labelOthers]
               let casesTotal, cases

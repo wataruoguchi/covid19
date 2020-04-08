@@ -5,9 +5,9 @@
       :title-id="'number-of-reports-to-covid19-consultation-desk'"
       :chart-id="'time-bar-chart-querents'"
       :chart-data="querentsGraph"
-      :date="Data.querents.date"
+      :date="Data.contacts.date"
       :unit="$t('件.reports')"
-      :url="'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000070'"
+      :url="'https://www.pref.nagano.lg.jp/joho/kensei/tokei/johoka/opendata/'"
     />
     <!-- 件.reports = 窓口相談件数 -->
   </v-col>
@@ -24,7 +24,7 @@ export default {
   },
   data() {
     // 帰国者・接触者電話相談センター相談件数
-    const querentsGraph = formatGraph(Data.querents.data)
+    const querentsGraph = formatGraph(Data.contacts.data)
 
     const data = {
       Data,
