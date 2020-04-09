@@ -87,7 +87,7 @@
             <img src="/youtube.png" alt="YouTube" />
           </a>
           <a
-            href="https://github.com/hisayan/covid19"
+            href="https://github.com/Stop-COVID19-Nagano/covid19"
             target="_blank"
             rel="noopener noreferrer"
             class="SideNavigation-SocialLink"
