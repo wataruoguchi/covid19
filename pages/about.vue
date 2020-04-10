@@ -180,7 +180,7 @@
       }}
       <i18n path="詳しくは、{githubRepo}をご確認ください。">
         <a
-          href="https://github.com/hisayan/covid19"
+          href="https://github.com/Stop-COVID19-Nagano/covid19"
           target="_blank"
           rel="noopener"
           place="githubRepo"
