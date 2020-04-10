@@ -16,6 +16,25 @@
         )
       }}
     </TextCard>
+    <TextCard :title="$t('当サイトに関するお問い合わせ')">
+      当サイト運営に関しましてのご意見・ご要望、その他バグ報告などは全てGitHub
+      Issueにて管理しております。
+      <br />なお、動作環境や免責事項につきましては、本ページにて記載させていただいております。
+      <br />
+      <br />
+      <a
+        href="https://github.com/Stop-COVID19-Nagano/covid19/issues"
+        target="_blank"
+        class="About-anchor"
+      >
+        <span class="About-anchor-link">
+          お問い合わせ等はこちら
+          <v-icon class="About-ExternalLinkIcon" size="12">
+            mdi-open-in-new
+          </v-icon>
+        </span>
+      </a>
+    </TextCard>
     <TextCard :title="$t('ブラウザ環境について')">
       {{ $t('当サイトは以下の環境でご覧いただくことを推奨いたします。') }}<br />
       <br />
@@ -207,6 +226,28 @@ export default {
     // このようなセレクタ指定としています
     list-style: none;
     padding: 12px 0;
+  }
+  &-anchor {
+    display: flex;
+    text-decoration: none;
+    font-size: 14px;
+
+    @include lessThan($medium) {
+      flex-wrap: wrap;
+    }
+
+    &-link {
+      flex: 0 1 auto;
+      @include text-link();
+      @include lessThan($medium) {
+        padding-left: 0px;
+      }
+    }
+
+    &-ExternalLinkIcon {
+      margin-left: 2px;
+      color: $gray-3 !important;
+    }
   }
 }
 </style>
