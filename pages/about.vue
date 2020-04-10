@@ -17,9 +17,17 @@
       }}
     </TextCard>
     <TextCard :title="$t('当サイトに関するお問い合わせ')">
-      当サイト運営に関しましてのご意見・ご要望、その他バグ報告などは全てGitHub
-      Issueにて管理しております。
-      <br />なお、動作環境や免責事項につきましては、本ページにて記載させていただいております。
+      {{
+        $t(
+          '当サイト運営に関しましてのご意見・ご要望、その他バグ報告などは全てGitHub Issueにて管理しております。'
+        )
+      }}
+      <br />
+      {{
+        $t(
+          'なお、動作環境や免責事項につきましては、本ページにて記載させていただいております。'
+        )
+      }}
       <br />
       <br />
       <a
@@ -28,7 +36,7 @@
         class="About-anchor"
       >
         <span class="About-anchor-link">
-          お問い合わせ等はこちら
+          {{ $t('お問い合わせ等はこちら') }}
           <v-icon class="About-ExternalLinkIcon" size="12">
             mdi-open-in-new
           </v-icon>
