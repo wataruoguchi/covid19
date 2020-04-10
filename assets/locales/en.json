@@ -161,5 +161,9 @@
     "graph": "Elsewhere"
   },
   "別タブで開く": "Open in a new tab",
-  "多言語対応選択メニュー": "Select language"
+  "多言語対応選択メニュー": "Select language",
+  "当サイトに関するお問い合わせ": "Inquiries about this site",
+  "当サイト運営に関しましてのご意見・ご要望、その他バグ報告などは全てGitHub Issueにて管理しております。": "Opinions and requests regarding the operation of this site and other bug reports are all managed by GitHub Issue.",
+  "なお、動作環境や免責事項につきましては、本ページにて記載させていただいております。": "The operating environment and disclaimers are described on this page.",
+  "お問い合わせ等はこちら": "Click here for inquiries"
 }
