@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://stop-covid19-nagano.netlify.com/"
+  to = "https://nagano.stopcovid19.jp/"
+  status = 301
+  force = true
