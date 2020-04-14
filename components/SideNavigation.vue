@@ -62,14 +62,14 @@
           >
             <img src="/line.png" alt="LINE" />
           </a>
-          <!-- <a
-            href="https://twitter.com/tokyo_bousai"
+          <a
+            href="https://twitter.com/nagano_corona"
             target="_blank"
             rel="noopener noreferrer"
             class="SideNavigation-SocialLink"
           >
             <img src="/twitter.png" alt="Twitter" />
-          </a> -->
+          </a>
           <!-- <a
             href="https://www.facebook.com/tochokoho"
             target="_blank"
